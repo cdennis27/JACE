@@ -4,6 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import "./ProductItem.css";
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -40,21 +41,21 @@ function ProductItem(item) {
   }
 
   return (
-    <div className="card px-1 py-1">
+    <div className="card">
       <Link to={`/products/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
+        <div className="img-container">
+          <img alt={name} src={`/images/${image}`} />
+        </div>
+        <div className="product-info">
+          <p className="product-name">{name}</p>
+          <p className="product-price">${price}</p>
+        </div>
       </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <button onClick={addToCart} className="add-to-cart-btn">
+        Add to cart
+      </button>
     </div>
-  );
+  );  
 }
 
 export default ProductItem;
