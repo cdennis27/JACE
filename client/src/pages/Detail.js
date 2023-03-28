@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import './Detail.css';
+
 
 import Cart from '../components/Cart';
 import { useStoreContext } from '../utils/GlobalState';
@@ -84,34 +86,45 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
-
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
+        <div className="detail-container">
+          <Link to="/">
+            <button className="back-to-products-btn">← Back to Products</button>
+          </Link>
+  
+          <h2 className="product-name">{currentProduct.name}</h2>
+  
+          <p className="product-description">{currentProduct.description}</p>
+  
+          <div className="image-container">
+            <img
+              className="product-image"
+              src={`/images/${currentProduct.image}`}
+              alt={currentProduct.name}
+            />
+          </div>
+  
+          <div className="actions">
+            <p className="product-price">
+              <strong>Price:</strong>${currentProduct.price}
+            </p>
+            <button className="add-to-cart-btn" onClick={addToCart}>
+              Add to Cart
+            </button>
             <button
+              className="remove-from-cart-btn"
               disabled={!cart.find((p) => p._id === currentProduct._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
             </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+          </div>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
     </>
   );
+  
 }
 
 export default Detail;
