@@ -1,0 +1,41 @@
+.footer {
+    background-color: #F1AE71;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    color: #EBEADD;
+  }
+  
+  .footer-content a {
+    color: #EBEADD;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tablet view */
+  @media (max-width: 768px) {
+    .footer-content h2 {
+      font-size: 24px;
+    }
+  
+    .footer-content p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Phone view */
+  @media (max-width: 480px) {
+    .footer-content h2 {
+      font-size: 20px;
+    }
+  
+    .footer-content p {
+      font-size: 14px;
+    }
+  }
+  
