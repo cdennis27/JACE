@@ -17,15 +17,20 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // Middleware to allow https requests in production
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
   if (req.header('x-forwarded-proto') !== 'https' && process.env.NODE_ENV === 'production') {
     res.redirect(`https://${req.header('host')}${req.url}`);
   } else {
     next();
   }
-});
+});*/
 
-
+/*app.get("*", (req, res) => {
+  let url = path.join(__dirname, '../client/build', 'index.html');
+  if (!url.startsWith('/app/')) // since we're on local windows
+    url = url.substring(1);
+  res.sendFile(url);
+});*/
 // Serve up static assets
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
@@ -33,7 +38,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 /*

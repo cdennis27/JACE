@@ -22,8 +22,11 @@ function Success() {
       }
 
       setTimeout(() => {
+        console.log('Order placed! You will now be redirected to the home page.');
+        localStorage.setItem("tableId", "");
+        console.log(localStorage.getItem("tableId"));
         window.location.assign('/');
-      }, 3000);
+      }, 7000);
     }
 
     saveOrder();

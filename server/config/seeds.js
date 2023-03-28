@@ -18,7 +18,7 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: "New York Striploin & Eggs",
+      name: "Steak & Eggs",
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'NEW-YORK-STRIPLOIN-n-EGGS.jpg',
