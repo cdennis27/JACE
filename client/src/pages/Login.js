@@ -75,7 +75,7 @@ console.log("tableId is already set = " + tableId);
           />
         </div>
         <div className="flex-row flex-end">
-          <h3>{tableId}</h3>
+          <h3>Thank you for coming!</h3>
         </div>
         {error ? (
           <div>
