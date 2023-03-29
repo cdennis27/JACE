@@ -5,7 +5,7 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Signature Dishes' },
+    { name: 'Egg Dishes' },
     { name: 'Eggs Benedict' },
     { name: 'Pancake Dishes' },
     { name: 'Beverages' },
@@ -27,7 +27,7 @@ db.once('open', async () => {
       quantity: 500
     },
     {
-      name: "Big Breakfast",
+      name: "Sausage & Eggs",
       description:
         'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
       image: 'ES-EGGSMART-BIG-BREAKFAST.jpg',
@@ -36,7 +36,7 @@ db.once('open', async () => {
       quantity: 500
     },
     {
-      name: "Classic Breakfast",
+      name: "Bacon & Eggs",
       category: categories[0]._id,
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
@@ -45,7 +45,7 @@ db.once('open', async () => {
       quantity: 20
     },
     {
-      name: "Keto Breakfast",
+      name: "No Carbs",
       category: categories[0]._id,
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
@@ -54,7 +54,7 @@ db.once('open', async () => {
       quantity: 50
     },
     {
-      name: "Signature Hash",
+      name: "Veggies, Hash & Eggs",
       category: categories[0]._id,
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
@@ -63,7 +63,7 @@ db.once('open', async () => {
       quantity: 100
     },
     {
-      name: "Tri-Fecta",
+      name: "Bacon, Pancake & Eggs",
       category: categories[0]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
@@ -81,7 +81,7 @@ db.once('open', async () => {
       quantity: 30
     },
     {
-      name: "Baja Benedict",
+      name: "Eggs Baja Benedict",
       category: categories[1]._id,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
@@ -90,7 +90,7 @@ db.once('open', async () => {
       quantity: 100
     },
     {
-      name: "Meat Lovers Benedict",
+      name: "Eggs Bacon Benedict",
       category: categories[1]._id,
       description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
       image: 'ES-EGGS-BENNIE_MEAT-LOVERS.jpg',
@@ -107,7 +107,7 @@ db.once('open', async () => {
       quantity: 1000
     },
     {
-      name: "Traditional Buttermilk Pancakes",
+      name: "Pancakes",
       category: categories[2]._id,
       description:
         'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
@@ -134,7 +134,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "Very Blueberry Pancakes",
+      name: "Blueberry Pancakes",
       category: categories[2]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
@@ -143,7 +143,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "Skyscraper Pancake",
+      name: "Chocolate Filled Pancakes",
       category: categories[2]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
@@ -152,7 +152,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "Going Green Smoothie",
+      name: "Wellness Blvd Smoothie",
       category: categories[3]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
@@ -161,7 +161,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "MMMMango Smoothie",
+      name: "Tropical Kiss Smoothie",
       category: categories[3]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
@@ -170,7 +170,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "Winning! Smoothie",
+      name: "Strawberry Banana Smoothie",
       category: categories[3]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
@@ -179,7 +179,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "Strawberry Banana Smoothie",
+      name: "Coffee Smoothie",
       category: categories[3]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
@@ -188,7 +188,7 @@ db.once('open', async () => {
       quantity: 600
     },
     {
-      name: "Signature Coffee",
+      name: "Coffee",
       category: categories[3]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
