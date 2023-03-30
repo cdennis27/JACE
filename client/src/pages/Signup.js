@@ -38,7 +38,7 @@ function Signup(props) {
       <div>
         <h2 className="signup">Hello, Friend!</h2>
         {/* <div className="flex-row flex-end table-num">
-          <h5>Table {tableId}</h5>
+          <h5>{tableId}</h5>
         </div>
         {error ? (
           <div>

@@ -55,7 +55,7 @@ function Login(props) {
       <div className="signup">
         <h2>Welcome Back!</h2>
         <div className="flex-row flex-end">
-          <h5>Table {tableId}</h5>
+          <h5>{tableId}</h5>
         </div>
         {error ? (
           <div>

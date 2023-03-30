@@ -86,36 +86,32 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="detail-container">
-          <Link to="/">
-            <button className="back-to-products-btn">← Back to Products</button>
-          </Link>
-  
-          <h2 className="product-name">{currentProduct.name}</h2>
-  
-          <p className="product-description">{currentProduct.description}</p>
-  
-          <div className="image-container">
-            <img
-              className="product-image"
-              src={`/images/${currentProduct.image}`}
-              alt={currentProduct.name}
-            />
-          </div>
-  
-          <div className="actions">
-            <p className="product-price">
-              <strong>Price:</strong>${currentProduct.price}
-            </p>
-                        
+        <div className="container my-1">
+          <Link to="/" className="links-to-go">← Back to Products </Link>
+          <div className="detail-container">
+            <div className="image-container">
+              <img
+                className="product-image"
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+              />
+            </div>
+
+            <div className="actions">
+              <h2 className="product-name">{currentProduct.name}</h2>
+              <p className="product-price">
+                <strong>Price:</strong>${currentProduct.price}
+              </p>
+              <p className="product-description">{currentProduct.description}</p>
+            </div>
           </div>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
-      
+
     </>
   );
-  
+
 }
 
 export default Detail;

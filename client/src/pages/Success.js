@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import Jumbotron from '../components/Jumbotron';
 import { ADD_ORDER } from '../utils/mutations';
 import { idbPromise } from '../utils/helpers';
+import "./style.css";
 
 function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
@@ -33,11 +34,11 @@ function Success() {
   }, [addOrder]);
 
   return (
-    <div>
+    <div className="success-children">
       <Jumbotron>
-        <h1>Success!</h1>
-        <h2>Thank you for your purchase!</h2>
-        <h2>You will now be redirected to the home page</h2>
+        <h2>💸👍</h2>
+        <h2>Your server will bring your order when ready!</h2>
+        <h4>You will now be redirected to the home page</h4>
       </Jumbotron>
     </div>
   );
