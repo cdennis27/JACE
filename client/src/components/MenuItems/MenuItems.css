@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
 .card {
   position: relative;
   box-sizing: border-box;
   padding: 20px;
-  background-color: white;
-  border: 3px solid orange;
+  background-color: var(--light);
+  border: 3px solid var(--secondary);
   border-radius: 5px;
   margin: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   overflow: hidden;
   display: flex;
@@ -17,7 +18,7 @@
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 12px rgba(0.15, 0.15, 0.15, 0.15);
 }
 
 .card:hover a {
@@ -37,20 +38,21 @@
 }
 
 .product-info {
-  margin-top: 10px;
   color: black;
-  font-family: Arial, sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 .product-name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 8px;
+  font-family: 'Barlow', sans-serif;
 }
 
 .product-price {
   font-size: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  font-family: 'Helvetica', sans-serif;
 }
 
 /* Tablet devices (768px and up) */

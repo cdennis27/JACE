@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link, useParams } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './Signup.css';
 var tableId = localStorage.getItem("tableId");
 
 function Login(props) {
@@ -50,14 +51,12 @@ console.log("tableId is already set = " + tableId);
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
-
-      <h2>Login</h2>
+      <Link to="/signup" className="links-to-go">← Go to Signup</Link>
+      <h2 className="signup">Welcome Back!</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email">Email:</label>
           <input
-            placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
@@ -67,7 +66,6 @@ console.log("tableId is already set = " + tableId);
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
           <input
-            placeholder="******"
             name="password"
             type="password"
             id="pwd"
@@ -83,7 +81,7 @@ console.log("tableId is already set = " + tableId);
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button type="submit" className="submit">Submit</button>
         </div>
       </form>
     </div>

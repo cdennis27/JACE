@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
 .footer {
-    background-color: #F1AE71;
+    background-color: var(--secondary);
     padding: 0px 0 10px 0;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
   }
   
   .footer-content {
@@ -18,12 +20,14 @@
 
   .footer-content p {
     padding-top: 60px;
+    font-family: 'Barlow', sans-serif;
   }
   
   .footer-content a {
     text-decoration: none;
     font-weight: 400;
     color: var(--primary);
+    font-family: 'Barlow', sans-serif;
   }
   
   .footer-content a:hover {

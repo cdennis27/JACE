@@ -1,8 +1,8 @@
 :root {
   --primary: #242424;
-  --secondary: #F3A847;
+  --secondary: #F1AE71;
   --tertiary: #B12704;
-  --light: #fafafa;
+  --light: #EBEADD;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -16,7 +16,7 @@
 html,
 body {
   min-height: 100%;
-  background-color: #EBEADD;
+  background-color: var(--light);
 }
 
 body {
