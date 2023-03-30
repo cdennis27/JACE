@@ -92,7 +92,7 @@ const Cart = () => {
             <CartItem key={item._id} item={item} />
           ))}
 
-          <div className="flex-row space-between">
+          <div className="flex-row space-between total">
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
@@ -103,12 +103,12 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h3>
+        <h7>
           <span role="img" aria-label="shocked">
             😱
           </span>
-          You haven't added anything to your cart yet!
-        </h3>
+           You haven't added anything to your plate yet!
+        </h7>
       )}
     </div>
   );

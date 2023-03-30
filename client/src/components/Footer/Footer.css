@@ -1,16 +1,29 @@
 .footer {
     background-color: #F1AE71;
-    padding: 20px 0;
+    padding: 0px 0 10px 0;
     text-align: center;
+    margin-top: 100px;
   }
   
   .footer-content {
-    color: #EBEADD;
+    color: var(--primary);
+    align-items: center;
+    text-align: center;
+    padding: 60px 0 0 0;
+    background-image: url(../../../src/assets/JACE-logo.png);
+    background-size: 125px;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .footer-content p {
+    padding-top: 60px;
   }
   
   .footer-content a {
-    color: #EBEADD;
     text-decoration: none;
+    font-weight: 400;
+    color: var(--primary);
   }
   
   .footer-content a:hover {
