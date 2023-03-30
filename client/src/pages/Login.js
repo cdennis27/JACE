@@ -7,7 +7,7 @@ import './Signup.css';
 var tableId = localStorage.getItem("tableId");
 
 function Login(props) {
-console.log("tableId is already set = " + tableId);
+  console.log("tableId is already set = " + tableId);
 
   var tempTableId = useParams().tablesId;
   if (tempTableId > 0) {
@@ -18,7 +18,7 @@ console.log("tableId is already set = " + tableId);
   if (tableId === null || tableId === undefined || tableId === "") {
     tableId = "";
   }
-  
+
   console.log("tempTableId=" + tempTableId);
   console.log(tableId);
 
@@ -52,7 +52,18 @@ console.log("tableId is already set = " + tableId);
   return (
     <div className="container my-1">
       <Link to="/signup" className="links-to-go">← Go to Signup</Link>
-      <h2 className="signup">Welcome Back!</h2>
+      <div className="signup">
+        <h2>Welcome Back!</h2>
+        <div className="flex-row flex-end">
+          <h5>Table {tableId}</h5>
+        </div>
+        {error ? (
+          <div>
+            <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+        ) : null}
+      </div>
+
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
@@ -72,14 +83,6 @@ console.log("tableId is already set = " + tableId);
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row flex-end">
-          <h3>{tableId}</h3>
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
-          </div>
-        ) : null}
         <div className="flex-row flex-end">
           <button type="submit" className="submit">Submit</button>
         </div>

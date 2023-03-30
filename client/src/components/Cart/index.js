@@ -74,7 +74,7 @@ const Cart = () => {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
-          🛒
+        🍽️
         </span>
       </div>
     );
@@ -83,7 +83,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+      x
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -92,15 +92,14 @@ const Cart = () => {
             <CartItem key={item._id} item={item} />
           ))}
 
-          <div className="flex-row space-between total">
+          <div className="total">
             <strong>Total: ${calculateTotal()}</strong>
-
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+          </div>
+          {Auth.loggedIn() ? (
+              <button onClick={submitCheckout} className="checkout-btn">Checkout</button>
             ) : (
               <span>(log in to check out)</span>
             )}
-          </div>
         </div>
       ) : (
         <h7>

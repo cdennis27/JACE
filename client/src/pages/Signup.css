@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
 
 .links-to-go {
-    color: var(--tertiary);
+    color: var(--primary);
     margin: 0px;
     padding: 0px;
+    font-size: 18px;
 }
+
+.links-to-go:hover {
+    text-decoration: none;
+    color: var(--error);
+}
+
 .signup {
     text-align: center;
     margin: 100px auto 0 auto;
@@ -20,6 +27,7 @@ form {
 }
 
 label {
+    font-size: 18px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -38,6 +46,7 @@ input {
 .submit {
     width: 100%;
     margin: 10px 0 0 0;
+    font-size: 18px;
     border-radius: 3px;
     background-color: var(--secondary);
     padding: 10px 25px;

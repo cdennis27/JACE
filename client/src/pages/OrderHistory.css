@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
+.order-history {
+    margin: 100px 0 0 0;
+}
+
+.order-history h2 {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.order-history div h5 {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+}

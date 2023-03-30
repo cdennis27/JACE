@@ -1,27 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
 .detail-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
   }
   
   .back-to-products-btn {
     cursor: pointer;
-    background-color: darkorange;
+    background-color: var(--secondary);
     border: none;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    color: var(--primary);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
     margin: 10px;
-    transition: background-color 0.3s ease;
+    border-radius: 3px;
   }
   
   .back-to-products-btn:hover {
-    background-color: orange;
+    background-color: var(--tertiary);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
   }
   
   .product-name {
+    font-family: 'Barlow', sans-serif;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -29,6 +35,7 @@
   }
   
   .product-description {
+    font-family: 'Barlow', sans-serif;
     font-size: 18px;
     text-align: center;
     margin: 0 20px 20px 20px;
@@ -40,8 +47,6 @@
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
-    border: 5px solid white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .product-image {
@@ -57,38 +62,49 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+    width: 50%;
   }
   
   .product-price {
     font-size: 18px;
   }
   
-  .add-to-cart-btn,
-  .remove-from-cart-btn {
+  .add-to-cart-btn {
     cursor: pointer;
-    background-color: darkorange;
+    background-color: var(--secondary);
     border: none;
-    color: white;
-    font-family: Arial, sans-serif;
+    color: var(--primary);
+    font-family: 'Barlow', sans-serif;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    border-radius: 3px;
+    width: 100%
   }
   
   .add-to-cart-btn:hover {
-    background-color: orange;
-  }
-  .remove-from-cart-btn:hover {
-    background-color: orange;
+    background-color: var(--tertiary);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
   }
   
   .remove-from-cart-btn {
-    background-color: darkred;
+    cursor: pointer;
+    background-color: var(--quaternary);
+    border: none;
+    color: var(--primary);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: 100%
   }
   
   .remove-from-cart-btn:hover {
-    background-color: red;
+    background-color: var(--quinary);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
   }
 
 

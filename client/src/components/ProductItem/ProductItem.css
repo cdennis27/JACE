@@ -17,7 +17,7 @@
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0.15, 0.15, 0.15, 0.15);
+  box-shadow: 0 8px 12px #24242437;
 }
 
 .card:hover a {
@@ -37,7 +37,7 @@
 }
 
 .product-info {
-  color: black;
+  color: var(--primary);
   font-family: 'Barlow', sans-serif;
 }
 
