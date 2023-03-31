@@ -11,3 +11,9 @@
     font-family: 'Barlow', sans-serif;
     padding: 0 15px;
 }
+
+.notFound {
+    font-family: 'Barlow', sans-serif;
+    color: var(--primary);
+    margin-top: 260px;
+}
