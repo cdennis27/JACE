@@ -26,7 +26,7 @@ const userSchema = new Schema({
     minlength: 5
   },
   employee: {
-    type: Boolean,
+    type: String,
     default: false
   },
   orders: [Order.schema]

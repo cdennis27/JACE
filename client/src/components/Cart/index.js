@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries';
@@ -8,19 +8,15 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
-require('dotenv').config();
+import emailjs from '@emailjs/browser';
 
-// TODO: Add a comment describing the functionality of loadStripe
-// Your comment here
-
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+const stripePromise = loadStripe(''); // use env variable for main push 
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
-  // TODO: Add a comment describing the functionality of the useEffect hook in this instance
-  // Your comment here
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -29,8 +25,6 @@ const Cart = () => {
     }
   }, [data]);
 
-  // TODO: Add a comment describing what data we are watching and what work should be preformed if that data changes
-  // Your comment here
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -54,9 +48,41 @@ const Cart = () => {
     return sum.toFixed(2);
   }
 
-  // TODO: Add a comment describing the functionality of our submitCheckout function.
-  // Your comment here
+  function sendReceiptEmail() {
+    const userEmail = Auth.getProfile().data.email;
+    let cartItemsString = '';
+    state.cart.forEach((item) => {
+      cartItemsString += `${item.title} x ${item.purchaseQuantity} - $${(item.price * item.purchaseQuantity).toFixed(2)}\n`;
+    });
+  
+    const templateParams = {
+      to_email: userEmail,
+      cartItems: cartItemsString,
+      total: calculateTotal(),
+    };
+  
+    emailjs
+      .send(
+        '', // change to emailjs service id
+        '', // change to emailjs template id
+        templateParams,
+        '' // change to emailjs public key 
+      )
+      .then(
+        (response) => {
+          console.log('Email successfully sent!', response.status, response.text);
+          setIsEmailSent(true);
+        },
+        (error) => {
+          console.log('Email failed to send...', error);
+        }
+      );
+  }
+  
+
   function submitCheckout() {
+    sendReceiptEmail();
+
     const productIds = [];
 
     state.cart.forEach((item) => {
@@ -69,7 +95,7 @@ const Cart = () => {
       variables: { products: productIds },
     });
   }
-
+  
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>

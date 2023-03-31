@@ -1,3 +1,5 @@
+
+
 export function pluralize(name, count) {
   if (count === 1) {
     return name;
@@ -71,3 +73,10 @@ export function validateEmail(email) {
   const reply = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return reply.test(String(email).toLowerCase());
 }
+
+
+
+
+
+
+

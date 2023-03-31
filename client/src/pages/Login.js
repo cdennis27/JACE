@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link, useParams } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './Signup.css';
 var tableId = localStorage.getItem("tableId");
 
 function Login(props) {
@@ -26,6 +27,7 @@ console.log("tableId is already set = " + tableId);
 
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
+  
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -33,7 +35,11 @@ console.log("tableId is already set = " + tableId);
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
+      
       const token = mutationResponse.data.login.token;
+      console.log(mutationResponse.data.login.user.employee);
+      localStorage.setItem("employee", mutationResponse.data.login.user.employee);
+      //debugger;
       Auth.login(token);
     } catch (e) {
       console.log(e);
@@ -50,14 +56,21 @@ console.log("tableId is already set = " + tableId);
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+      <Link to="/signup" className="links-to-go">← Go to Signup</Link>
+      <div className="signup">
+        <h2>Welcome Back!</h2>
 
-      <h2>Login</h2>
+        {error ? (
+          <div>
+            <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+        ) : null}
+      </div>
+
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email">Email:</label>
           <input
-            placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
@@ -67,7 +80,6 @@ console.log("tableId is already set = " + tableId);
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
           <input
-            placeholder="******"
             name="password"
             type="password"
             id="pwd"
@@ -75,15 +87,7 @@ console.log("tableId is already set = " + tableId);
           />
         </div>
         <div className="flex-row flex-end">
-          <h3>Thank you for coming!</h3>
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
-          </div>
-        ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button type="submit" className="submit">Submit</button>
         </div>
       </form>
     </div>

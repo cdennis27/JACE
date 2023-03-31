@@ -22,7 +22,6 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <h2>{tableNumber}</h2>
-        <h2>JACE</h2>
         <p>
           Want to learn more? <Link to="/contact">Contact Us Here!</Link>
         </p>
