@@ -73,6 +73,12 @@
   width: 100%;
 }
 
+.quantity-remove {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
 .cart span {
   margin: 0 10px 0 0;
 }

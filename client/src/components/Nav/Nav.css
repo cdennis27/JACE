@@ -44,10 +44,10 @@
   .logo-circle {
     width: 50px;
     height: 50px;
-    background-image: url(../../../src/assets/logo.png);
+    background-image: url(../../../src/assets/icon.png);
     background-position: center;
     background-size: 60px;
-    margin: 5px 0 0 60px;
+    margin: 0 0 0 60px;
   }
   
   .nav-links {

@@ -54,9 +54,9 @@ function Login(props) {
       <Link to="/signup" className="links-to-go">← Go to Signup</Link>
       <div className="signup">
         <h2>Welcome Back!</h2>
-        <div className="flex-row flex-end">
+        {/* <div className="flex-row flex-end">
           <h5>{tableId}</h5>
-        </div>
+        </div> */}
         {error ? (
           <div>
             <p className="error-text">The provided credentials are incorrect</p>
