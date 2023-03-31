@@ -31,9 +31,15 @@ class AuthService {
     // Saves user token to localStorage
     localStorage.setItem('id_token', idToken);
     var tableId = localStorage.getItem("tableId");
+    var employee = localStorage.getItem("employee");
+    console.log(employee);
     
-    if (tableId === null || tableId === undefined || tableId === "") {
-      console.log("No TABLE!!!!!!!!");
+
+    if (employee == "true") {
+      console.log("Employee!!");
+      window.location.assign('/admin');
+    } else if (tableId === null || tableId === undefined || tableId === "") {
+      console.log("No TABLE!!");
       window.location.assign('/');
     } else {
       window.location.assign('/tableOrder');
@@ -44,6 +50,7 @@ class AuthService {
     // Clear user token and profile data from localStorage
     localStorage.removeItem('id_token');
     localStorage.removeItem('tableId');
+    localStorage.removeItem('employee');
     // this will reload the page and reset the state of the application
     window.location.assign('/');
   }

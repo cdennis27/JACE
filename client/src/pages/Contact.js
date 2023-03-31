@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { validateEmail, validateInput } from '../utils/helpers';
-
 import './Contact.css';
 
 function Contact() {
@@ -46,7 +45,7 @@ function Contact() {
         console.log(result.text);
         console.log(form);         // <form ref={form} onSubmit={sendEmail}>
         setErrorMessage("Message sent, We will get back to you shortly!");
-        await delay(5000);
+        await delay(2000);
         clearForm();
         return setErrorMessage('');
 
@@ -103,32 +102,34 @@ function Contact() {
 
   return (
 
-    <section className="contact">
-      <a className="contact-left-container">
-        <img className="map" src='/images/map.png' alt="map" />
-      </a>
+    <section>
+      <h2 className="contact-us">Contact Us</h2>
 
-      <div className="contact-right-container">
-        <h1>JACE</h1>
-        <p>Feel free to contact me with any questions or comments you may have. I will get back to you as soon as possible.</p>
-        <p>Phone: 123-456-7890</p>
-        <p>Email: <a href="mailto:jace1971@yahoo.com">jace1971@yahoo.com</a></p>
-        <p>Address: 100 Queen St W, Toronto</p>
-        <h1>Contact form</h1>
-        <form className="contact-form" ref={form} onSubmit={sendEmail}>
-          <label className="label">Name</label>
-          <input placeholder="Name" type="text" name="user_name" className="input" onChange={handleName} onFocus={handleFocus} onBlur={handleBlur} />
-          <label>Email</label>
-          <input placeholder="Email" type="email" name="user_email" className="input" onChange={handleEmail} onFocus={handleFocus} onBlur={handleBlur} />
-          <label>Message</label>
-          <textarea placeholder="Place your message here." name="message" className="input message-box" onChange={handleMessage} onFocus={handleFocus} onBlur={handleBlur} />
-          <input className="submit" type="submit" value="Send" />
-        </form>
-        {errorMessage && (
-          <div>
-            <p className="error-message">{errorMessage}</p>
-          </div>
-        )}
+      <div className="contact">
+        <div className="contact-left-container">
+          <img className="map" src='/images/map.png' alt="map" />
+        </div>
+
+        <div className="contact-right-container">
+          <p>Phone: 123-456-7890</p>
+          <p>Email: <a href="mailto:jace1971@yahoo.com">jace1971@yahoo.com</a></p>
+          <p>Address: 130 St George St, Toronto</p>
+          
+          <form className="contact-form" ref={form} onSubmit={sendEmail}>
+            <label className="label">Name</label>
+            <input type="text" name="user_name" className="input" onChange={handleName} onFocus={handleFocus} onBlur={handleBlur} />
+            <label>Email</label>
+            <input  type="email" name="user_email" className="input" onChange={handleEmail} onFocus={handleFocus} onBlur={handleBlur} />
+            <label>Message</label>
+            <textarea placeholder="Enter message" name="message" className="input message-box" onChange={handleMessage} onFocus={handleFocus} onBlur={handleBlur} />
+            <input className="submit" type="submit" value="Send" />
+          </form>
+          {errorMessage && (
+            <div>
+              <p className="error-message">{errorMessage}</p>
+            </div>
+          )}
+        </div>
       </div>
 
     </section>

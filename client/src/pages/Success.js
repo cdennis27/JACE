@@ -26,18 +26,18 @@ function Success() {
         localStorage.setItem("tableId", "");
         console.log(localStorage.getItem("tableId"));
         window.location.assign('/');
-      }, 7000);
+      }, 4000);
     }
 
     saveOrder();
   }, [addOrder]);
 
   return (
-    <div>
+    <div className="success-children">
       <Jumbotron>
-        <h1>Success!</h1>
-        <h2>Thank you for your purchase!</h2>
-        <h2>You will now be redirected to the home page</h2>
+        <h2>💸👍</h2>
+        <h2>Your server will bring your order when ready!</h2>
+        <h4>You will now be redirected to the home page</h4>
       </Jumbotron>
     </div>
   );

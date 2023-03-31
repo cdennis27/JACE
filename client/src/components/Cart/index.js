@@ -70,11 +70,11 @@ const Cart = () => {
     });
   }
 
-  if (!state.cartOpen) {
+ if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
-          🛒
+        🍽️
         </span>
       </div>
     );
@@ -83,7 +83,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+      x
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -92,23 +92,22 @@ const Cart = () => {
             <CartItem key={item._id} item={item} />
           ))}
 
-          <div className="flex-row space-between">
+          <div className="total">
             <strong>Total: ${calculateTotal()}</strong>
-
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+          </div>
+          {Auth.loggedIn() ? (
+              <button onClick={submitCheckout} className="checkout-btn">Checkout</button>
             ) : (
               <span>(log in to check out)</span>
             )}
-          </div>
         </div>
       ) : (
-        <h3>
+        <h7>
           <span role="img" aria-label="shocked">
             😱
           </span>
-          You haven't added anything to your cart yet!
-        </h3>
+           You haven't added anything to your plate yet!
+        </h7>
       )}
     </div>
   );

@@ -26,6 +26,16 @@ const resolvers = {
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');
     },
+    //
+    users: async () => {
+      const user = await User.find();
+      //console.log(user);
+      console.log(user.length);
+
+      //console.log(user);
+      return user;
+    },
+    //
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -123,7 +133,7 @@ const resolvers = {
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-
+      console.log(user.employee);
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
       }
