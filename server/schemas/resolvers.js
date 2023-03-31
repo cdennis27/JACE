@@ -86,6 +86,7 @@ const resolvers = {
         cancel_url: `${url}/`
       });
 
+      console.log("session is Over!!!!!!: ");
       return { session: session.id };
     }
   },

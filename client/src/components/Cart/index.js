@@ -13,7 +13,7 @@ require('dotenv').config();
 // TODO: Add a comment describing the functionality of loadStripe
 // Your comment here
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY); //need to change this locally to work, do the same with resolvers line 4
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -105,9 +105,9 @@ const Cart = () => {
       ) : (
         <h3>
           <span role="img" aria-label="shocked">
-            😋
+            😱
           </span>
-          Hungry? Add an item to your plate!
+          You haven't added anything to your cart yet!
         </h3>
       )}
     </div>

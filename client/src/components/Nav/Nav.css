@@ -9,7 +9,6 @@
   .nav-header h1,
   .nav-header a {
     color: black;
-    text-decoration: none;
   }
 
   .nav-header ul {
@@ -30,7 +29,7 @@
   .logo-circle {
     width: 50px;
     height: 50px;
-    background-color: #2d2c2c;
+    background-color: #2d2c2c; 
     /* We can replace background-color with a background-img to put the logo in the circle area! */
     border-radius: 50%;
     border: 2px solid black;

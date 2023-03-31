@@ -1,10 +1,29 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+var tableId = localStorage.getItem("tableId");
 
 function Login(props) {
+console.log("tableId is already set = " + tableId);
+
+  var tempTableId = useParams().tablesId;
+  if (tempTableId > 0) {
+    tableId = tempTableId;
+    localStorage.setItem("tableId", tableId);
+  }
+
+  if (tableId === null || tableId === undefined || tableId === "") {
+    tableId = "";
+  }
+  
+  console.log("tempTableId=" + tempTableId);
+  console.log(tableId);
+
+
+
+
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
@@ -54,6 +73,9 @@ function Login(props) {
             id="pwd"
             onChange={handleChange}
           />
+        </div>
+        <div className="flex-row flex-end">
+          <h3>Thank you for coming!</h3>
         </div>
         {error ? (
           <div>

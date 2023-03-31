@@ -18,6 +18,11 @@ function Nav() {
               Logout
             </a>
           </li>
+          <li className="mx-1">
+            <Link to="/contact">
+              Contact
+            </Link>
+          </li>
         </ul>
       );
     } else {
@@ -33,6 +38,11 @@ function Nav() {
               Login
             </Link>
           </li>
+          <li className="mx-1">
+            <Link to="/contact">
+              Contact
+            </Link>
+          </li>
         </ul>
       );
     }
@@ -43,7 +53,7 @@ function Nav() {
       <div className="logo-container">
         <div className="logo-circle"></div>
         <h1>
-          <Link to="/">
+          <Link to="/tableOrder">
             JACE
           </Link>
         </h1>

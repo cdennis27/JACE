@@ -30,13 +30,20 @@ class AuthService {
   login(idToken) {
     // Saves user token to localStorage
     localStorage.setItem('id_token', idToken);
-
-    window.location.assign('/');
+    var tableId = localStorage.getItem("tableId");
+    
+    if (tableId === null || tableId === undefined || tableId === "") {
+      console.log("No TABLE!!!!!!!!");
+      window.location.assign('/');
+    } else {
+      window.location.assign('/tableOrder');
+    }
   }
 
   logout() {
     // Clear user token and profile data from localStorage
     localStorage.removeItem('id_token');
+    localStorage.removeItem('tableId');
     // this will reload the page and reset the state of the application
     window.location.assign('/');
   }

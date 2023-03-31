@@ -19,6 +19,8 @@ import Contact from './pages/Contact';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import Tables from './pages/Tables';
+import MenuDetail from './pages/MenuDetail';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -71,9 +73,21 @@ function App() {
                 path="/products/:id" 
                 element={<Detail />} 
               />
+              <Route 
+                path="/menuDetail/:id" 
+                element={<MenuDetail />} 
+              />
               <Route
                 path="/contact"
                 element={<Contact />}
+              />
+              <Route
+                path="/tables/:tablesId"
+                element={<Login />}
+              />
+              <Route
+                path="/tableOrder"
+                element={<Tables />}
               />
               <Route 
                 path="*" 
