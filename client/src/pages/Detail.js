@@ -86,37 +86,34 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="detail-container">
-          <Link to="/tableOrder">
-            <button className="back-to-products-btn">← Back to Products</button>
-          </Link>
-  
-          <h2 className="product-name">{currentProduct.name}</h2>
-  
-          <p className="product-description">{currentProduct.description}</p>
-  
-          <div className="image-container">
-            <img
-              className="product-image"
-              src={`/images/${currentProduct.image}`}
-              alt={currentProduct.name}
-            />
-          </div>
-  
-          <div className="actions">
-            <p className="product-price">
-              <strong>Price:</strong>${currentProduct.price}
-            </p>
-            <button className="add-to-cart-btn" onClick={addToCart}>
-              Add to Cart
-            </button>
-            <button
-              className="remove-from-cart-btn"
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
+        <div className="container my-1">
+          <Link to="/tableOrder" className="links-to-go">← Back to Products</Link>
+          <div className="detail-container">
+            <div className="image-container">
+              <img
+                className="product-image"
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+              />
+            </div>
+
+            <div className="actions">
+            <h2 className="product-name">{currentProduct.name}</h2>
+              <p className="product-price">
+                <strong>Price:</strong>${currentProduct.price}
+              </p>
+              <p className="product-description">{currentProduct.description}</p>
+              <button className="add-to-cart-btn" onClick={addToCart}>
+                Add to Cart
+              </button>
+              <button
+                className="remove-from-cart-btn"
+                disabled={!cart.find((p) => p._id === currentProduct._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+              </button>
+            </div>
           </div>
         </div>
       ) : null}
@@ -124,7 +121,7 @@ function Detail() {
       <Cart />
     </>
   );
-  
+
 }
 
 export default Detail;

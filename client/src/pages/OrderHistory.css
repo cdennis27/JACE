@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
+.order-history {
+    margin: 100px 0 0 0;
+}
+
+.order-history h2 {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.order-history div h5 {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+}
+
+.card Link img {
+    height: 234;
+    width: 234;
+}
+
+.history {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}

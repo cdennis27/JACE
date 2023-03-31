@@ -9,7 +9,7 @@ db.once('open', async () => {
     { name: 'Eggs Benedict' },
     { name: 'Pancake Dishes' },
     { name: 'Beverages' },
-    { name: 'Add-Ons' }
+    { name: 'Sides' }
   ]);
 
   console.log('categories seeded');
@@ -18,56 +18,56 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: "New York Striploin & Eggs",
+      name: "Steak & Eggs",
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'NEW-YORK-STRIPLOIN-n-EGGS.jpg',
+        'Canadian AAA striploin with eggs cooked any style. Served with toast and potato wedges. Can substitute potato wedges for hash browns or french fries. [1030 Cals]',
+      image: 'steak-and-eggs.png',
       category: categories[0]._id,
       price: 15.99,
       quantity: 500
     },
     {
-      name: "Big Breakfast",
+      name: "Sausage & Eggs",
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'ES-EGGSMART-BIG-BREAKFAST.jpg',
+        'Fresh country sausage with eggs cooked any style. Served with toast and potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [1030 Cals]',
+      image: 'sausage-and-eggs.png',
       category: categories[0]._id,
       price: 11.99,
       quantity: 500
     },
     {
-      name: "Classic Breakfast",
+      name: "Bacon & Eggs",
       category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'Classic-Breakfast.jpg',
+        'Double smoked bacon with eggs cooked any style. Served with toast and potao wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [1080 Cals]',
+      image: 'bacon-and-eggs.png',
       price: 9.99,
       quantity: 20
     },
     {
-      name: "Keto Breakfast",
+      name: "No Carbs",
       category: categories[0]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'KETO-BREAKFAST-PLATE.jpg',
+        'Double smoked bacon with eggs cooked any style. Served with potato wedges and cooked vegetables. Can substitute potato wedges for hash browns or french fries. [1020 Cals]',
+      image: 'no-carbs.png',
       price: 13.99,
       quantity: 50
     },
     {
-      name: "Signature Hash",
+      name: "Veggies, Hash & Eggs",
       category: categories[0]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'SIGNATURE-HASH.jpg',
+        'Eggs cooked any style with sauteed potato, asparagus, onions and peppers. Served with a fruit bowl. [1130 Cals]',
+      image: 'hash.png',
       price: 10.99,
       quantity: 100
     },
     {
-      name: "Tri-Fecta",
+      name: "Bacon, Pancake & Eggs",
       category: categories[0]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'TRI-FECTA.jpg',
+        'Double smoked bacon with eggs cooked andy style and pancakes. Served with toast and potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [1050 Cals] ',
+      image: 'bacon-pancake-and-eggs.png',
       price: 13.99,
       quantity: 30
     },
@@ -75,25 +75,25 @@ db.once('open', async () => {
       name: "Eggs Benedict",
       category: categories[1]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'EGGS-BENEDICT.jpg',
+        'Poached eggs on an English muffin with smoked salmon and hollandaise sauce. Served with potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [760 Cals]',
+      image: 'smoked-salmon.png',
       price: 11.49,
       quantity: 30
     },
     {
-      name: "Baja Benedict",
+      name: "Eggs Caprese Benedict",
       category: categories[1]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'BAJA.jpg',
+        'Poached eggs on an English muffin with tomatoes, basil and hollandaise sauce. Served with potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [780 Cals]',
+      image: 'caprese.png',
       price: 11.49,
       quantity: 100
     },
     {
-      name: "Meat Lovers Benedict",
+      name: "Eggs Bacon Benedict",
       category: categories[1]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'ES-EGGS-BENNIE_MEAT-LOVERS.jpg',
+      description: 'Poached eggs on an English muffin with Canadian bacon and hollandaise sauce. Served with potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [690 Cals]',
+      image: 'bacon-benedict.png',
       price: 12.49,
       quantity: 1000
     },
@@ -101,17 +101,17 @@ db.once('open', async () => {
       name: "Eggs Florentine Benedict",
       category: categories[1]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'EGGS-FLORENTINE.jpg',
+        'Poached eggs on an English muffin with sauteed baby spinach and hollandaise sauce. Served with potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [690 Cals]',
+      image: 'florentine.png',
       price: 11.49,
       quantity: 1000
     },
     {
-      name: "Traditional Buttermilk Pancakes",
+      name: "Pancakes",
       category: categories[2]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'TRADITIONAL-BUTTERMILK-PANCAKES.jpg',
+        'Pancakes served with butter, maple syrup and fresh berries. [630 Cals]',
+      image: 'pancake.png',
       price: 9.99,
       quantity: 100
     },
@@ -119,8 +119,8 @@ db.once('open', async () => {
       name: "Chocolate Chip Pancakes",
       category: categories[2]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'CHOCO-CHIP-PANCAKES.jpg',
+        'Pancakes made with chocolate chips served with syrup and fresh berries. [840 Cals]',
+      image: 'chocolate-chip.png',
       price: 10.49,
       quantity: 600
     },
@@ -128,71 +128,71 @@ db.once('open', async () => {
       name: "Strawberry Banana Pancakes",
       category: categories[2]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'STRAWBERRY-BANANA-PANCAKES.jpg',
+        'Pancakes made with strawberries and bananas served with syrup and fresh berries. [740 Cals]',
+      image: 'strawberry-banana.png',
       price: 10.49,
       quantity: 600
     },
     {
-      name: "Very Blueberry Pancakes",
+      name: "Blueberry Pancakes",
       category: categories[2]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'ES-BLUEBERRY-PANCAKES-1024x683.jpg',
+        'Pancakes made with blueberries served with syrup and fresh berries. [730 Cals]',
+      image: 'blueberry.png',
       price: 10.49,
       quantity: 600
     },
     {
-      name: "Skyscraper Pancake",
+      name: "Chocolate Filled Pancakes",
       category: categories[2]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'ES-SKYSCRAPER_PANCAKES.jpg',
+        'Pancakes made with Nutella chocolate filling served with syrup and fresh berries. [840 Cals]',
+      image: 'nutella-pancake.png',
       price: 12.39,
       quantity: 600
     },
     {
-      name: "Going Green Smoothie",
+      name: "Wellness Blvd Smoothie",
       category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'green-smoothie-1024x683.jpg',
+        'A healthy blend of baby spinach, banana, mango, vanilla yogurt and milk with a hint of honey. [240 Cals]',
+      image: 'green-smoothie.png',
       price: 5.99,
       quantity: 600
     },
     {
-      name: "MMMMango Smoothie",
+      name: "Tropical Kiss Smoothie",
       category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'Mango-1024x683.jpg',
+        'A refreshing blend of mango, pineapple, banana, vanilla yogurt and orange juice. [240 Cals]',
+      image: 'yellow-smoothie.png',
       price: 5.99,
       quantity: 600
     },
     {
-      name: "Winning! Smoothie",
+      name: "Red Very Berry Smoothie",
       category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'winning-smoothie-1024x683.jpg',
+        'A refreshing blend of strawberries, raspberries, banana, vanilla yogurt and milk. [240 Cals]',
+      image: 'red-smoothie.png',
       price: 5.99,
       quantity: 600
     },
     {
-      name: "Strawberry Banana Smoothie",
+      name: "Coffee Smoothie",
       category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'strawberry-banana-smoothie-1024x683.jpg',
+        'A sweet blend of coffee, banana, dates, vanilla yogurt and milk. [240 Cals]',
+      image: 'coffee-smoothie.png',
       price: 5.99,
       quantity: 600
     },
     {
-      name: "Signature Coffee",
+      name: "Coffee",
       category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'ES-COFFEE-1.jpg',
+        'Freshly brewed coffee served with cream and sugar. [5 Cals]',
+      image: 'coffee.png',
       price: 3.29,
       quantity: 600
     },
@@ -200,17 +200,53 @@ db.once('open', async () => {
       name: "Iced Coffee",
       category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'Iced-Coffee-1024x683.jpg',
+        'Freshly brewed coffee served over ice with cream and sugar. [5 Cals]',
+      image: 'iced-coffee.png',
       price: 3.89,
       quantity: 600
     },
     {
-      name: "Side of Fruit",
+      name: "Potato Wedges",
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
+        'Bowl of small baked potato wedges. [123 Cals]',
+      image: 'potato-wedges.png',
+      price: 3.99,
+      quantity: 600
+    },
+    {
+      name: "Hash Browns",
+      category: categories[4]._id,
+      description:
+        'Plate of hash browns. [326 Cals]',
+      image: 'hash-brown.png',
+      price: 3.99,
+      quantity: 600
+    },
+    {
+      name: "French Fries",
+      category: categories[4]._id,
+      description:
+        'Plate of french fries. [312 Cals]',
+      image: 'french-fries.png',
+      price: 3.99,
+      quantity: 600
+    },
+    {
+      name: "Sauteed Vegetables",
+      category: categories[4]._id,
+      description:
+        'Plate of sauteed veggetables. [107 Cals]',
+      image: 'sauteed-vegetables.png',
+      price: 3.99,
+      quantity: 600
+    },
+    {
+      name: "Fruits",
+      category: categories[4]._id,
+      description:
+        'Side of fresh berries [90 Cals]',
+      image: 'fruits.png',
       price: 3.99,
       quantity: 600
     },
@@ -218,12 +254,11 @@ db.once('open', async () => {
       name: "Extra toast",
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
+        'Plate of extra toast. [90 Cals]',
+      image: 'toast.png',
       price: 1.99,
       quantity: 600
     },
-
   ]);
 
   console.log('products seeded');
