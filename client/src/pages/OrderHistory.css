@@ -14,3 +14,15 @@
     font-family: 'Barlow', sans-serif;
     display: flex;
 }
+
+.card Link img {
+    height: 234;
+    width: 234;
+}
+
+.history {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}

@@ -4,7 +4,7 @@ import "./style.css";
 function Jumbotron({ children }) {
   return (
     <div
-      style={{ height: 175, clear: "both", textAlign: "center" }}
+      style={{ height: 260, clear: "both", textAlign: "center" }}
     >
       {children}
     </div>

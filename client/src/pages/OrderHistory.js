@@ -20,7 +20,7 @@ function OrderHistory() {
         <Link to="/" className="links-to-go">← Back to Products</Link>
 
         {user ? (
-          <div className="flex-row space-between my-2 order-history">
+          <div className="space-between my-2 order-history">
             <h2>
               Order History for {user.firstName} {user.lastName}
             </h2>
@@ -29,7 +29,7 @@ function OrderHistory() {
                 <h5>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h5>
-                <div className="flex-row">
+                <div className="history">
                   {order.products.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="card px-1 py-1">
                       <Link to={`/products/${_id}`}>
