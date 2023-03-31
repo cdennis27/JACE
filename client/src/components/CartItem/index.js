@@ -44,22 +44,24 @@ const CartItem = ({ item }) => {
           alt=""
         />
       </div>
-      <div>
-        <div>{item.name}, ${item.price}</div>
-        <div>
-          <span>Qty:</span>
-          <input
-            type="number"
-            placeholder="1"
-            value={item.purchaseQuantity}
-            onChange={onChange}
-          />
+      <div className="cart-item">
+        <div>{item.name} ${item.price}</div>
+        <div className="quantity-remove">
+          <div className="quantity">
+            <span>Qty:</span>
+            <input
+              type="number"
+              value={item.purchaseQuantity}
+              onChange={onChange}
+            />
+          </div>
           <span
             role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
+            className="remove"
           >
-            🗑️
+            Remove
           </span>
         </div>
       </div>
