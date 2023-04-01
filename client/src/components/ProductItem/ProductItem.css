@@ -4,6 +4,7 @@
   position: relative;
   box-sizing: border-box;
   padding: 20px;
+  margin: 10px;
   background-color: var(--light);
   border: 3px solid var(--secondary);
   border-radius: 5px;

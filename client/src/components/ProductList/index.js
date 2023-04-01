@@ -76,7 +76,7 @@ function ProductList() {
     <div className="my-2">
       {state.categories.map((category) => (
         <div key={category._id}>
-          <h2 onClick={() => toggleCategoryVisibility(category._id)}>{category.name}</h2>
+          <h2 className="category-menu" onClick={() => toggleCategoryVisibility(category._id)}>{category.name}</h2>
           <div className="flex-row">{renderProductsByCategory(category._id)}</div>
         </div>
       ))}
