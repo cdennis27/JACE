@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.be98f705.chunk.css",
-    "main.js": "/static/js/main.60b265f6.chunk.js",
-    "main.js.map": "/static/js/main.60b265f6.chunk.js.map",
+    "main.js": "/static/js/main.550fb728.chunk.js",
+    "main.js.map": "/static/js/main.550fb728.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e2120ead.js",
     "runtime-main.js.map": "/static/js/runtime-main.e2120ead.js.map",
-    "static/js/2.8bed1644.chunk.js": "/static/js/2.8bed1644.chunk.js",
-    "static/js/2.8bed1644.chunk.js.map": "/static/js/2.8bed1644.chunk.js.map",
+    "static/js/2.6f1f2200.chunk.js": "/static/js/2.6f1f2200.chunk.js",
+    "static/js/2.6f1f2200.chunk.js.map": "/static/js/2.6f1f2200.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.be98f705.chunk.css.map": "/static/css/main.be98f705.chunk.css.map",
-    "static/js/2.8bed1644.chunk.js.LICENSE.txt": "/static/js/2.8bed1644.chunk.js.LICENSE.txt",
+    "static/js/2.6f1f2200.chunk.js.LICENSE.txt": "/static/js/2.6f1f2200.chunk.js.LICENSE.txt",
     "static/media/Footer.css": "/static/media/JACE-logo.d58fa865.png",
     "static/media/Nav.css": "/static/media/icon.0c00845f.png",
     "static/media/spinner.7e729fec.gif": "/static/media/spinner.7e729fec.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.e2120ead.js",
-    "static/js/2.8bed1644.chunk.js",
+    "static/js/2.6f1f2200.chunk.js",
     "static/css/main.be98f705.chunk.css",
-    "static/js/main.60b265f6.chunk.js"
+    "static/js/main.550fb728.chunk.js"
   ]
 }
