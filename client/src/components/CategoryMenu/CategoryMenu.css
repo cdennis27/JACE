@@ -28,3 +28,12 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
   transform: scale(1.05);
 }
+
+/* Tablet devices (768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .category-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 0 5px 5px 10px;
+  }
+}
