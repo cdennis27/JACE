@@ -2,68 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&display=swap');
 
 .nav-header {
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 23px 0;
-  }
-  
-  .nav-header h1 {
-    color: var(--primary);
-    text-decoration: none;
-    margin: 5px 0 0 0;
-    font-family: 'Bebas Neue', 'Oswald', Helvetica, sans-serif;
-    font-size: 3rem;
-  }
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0;
+}
 
-  .nav-header a {
-    color: var(--primary);
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-  }
+.nav-header h1 {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 5px 0 0 0;
+  font-family: 'Bebas Neue', 'Oswald', Helvetica, sans-serif;
+  font-size: 3rem;
+}
 
-  .nav-header ul {
-    margin-right: 5rem;
-    list-style: none;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 200;
-  }
+.nav-header a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .nav-header ul li {
-    font-size: 1.3rem;
-    padding: 0.5rem;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-circle {
-    width: 50px;
-    height: 50px;
-    background-image: url(../../../src/assets/icon.png);
-    background-position: center;
-    background-size: 60px;
-    margin: 0 0 0 60px;
-  }
-  
+.nav-header ul {
+  margin-right: 5rem;
+  list-style: none;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 200;
+}
+
+.nav-header ul li {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  background-image: url(../../../src/assets/icon.png);
+  background-position: center;
+  background-size: 60px;
+  margin: 0 0 0 60px;
+}
+
+.nav-links {
+  display: flex;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
   .nav-links {
-    display: flex;
-    margin: 0;
+    font-size: 0.9rem;
   }
-  
-  @media screen and (max-width: 768px) {
-    .nav-links {
-      font-size: 0.9rem;
-    }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-links {
+    font-size: 0.8rem;
   }
-  
-  @media screen and (max-width: 480px) {
-    .nav-links {
-      font-size: 0.8rem;
-    }
-  }
-  
+}
