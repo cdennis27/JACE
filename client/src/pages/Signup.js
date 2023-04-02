@@ -38,7 +38,7 @@ function Signup(props) {
         <h2 className="signup">Hello, Friend!</h2>
       </div>
 
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className="signup-padding">
         <div className="flex-row space-between my-2">
           <label htmlFor="firstName">First Name:</label>
           <input
