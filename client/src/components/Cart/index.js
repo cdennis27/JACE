@@ -65,10 +65,10 @@ const Cart = () => {
 
     emailjs
       .send(
-        '', // change to emailjs service id
-        '', // change to emailjs template id
+        'service_65z17x41', // change to emailjs service id
+        'template_9d825df', // change to emailjs template id
         templateParams,
-        '' // change to emailjs public key 
+        'Sj7tZLR-yvIAnWwpp' // change to emailjs public key 
       )
       .then(
         (response) => {
