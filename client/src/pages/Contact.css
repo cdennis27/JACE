@@ -1,44 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
 
+.contact-us {
+  margin: 100px auto 50px auto;
+  text-align: center;
+  flex-direction: column;
+  font-family: 'Barlow', sans-serif;
+}
+
 .contact {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: var(--light);
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
-.contact-us {
-  margin: 100px auto 0 auto;
-  text-align: center;
-  flex-direction: column;
-  font-family: 'Barlow', sans-serif;
-}
-
 .contact-left-container {
-  display: flex;
-  width: 60%;
+  width: 50%;
+  padding: 40px 0 40px 100px;
 }
 
 .map {
-  width: 100%;
-  padding: 40px;
+  width: 80%;
 }
 
 .contact-right-container {
-  display: flex;
   flex-direction: column;
   width: 50%;
-  padding: 40px;
+  padding: 20px 100px 20px 0;
 }
 
-.contact h1 {
+.contact-right-container h1 {
   color: var(--primary);
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
+  text-decoration: none;
+  margin: 5px 0 0 0;
+  font-family: 'Bebas Neue', 'Oswald', Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+
+.contact-right-container p {
+  margin: 5px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+label {
+  font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 .input {
@@ -53,22 +69,9 @@ input:focus {
   box-shadow: 0 8px 12px #24242437;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-}
-
-label {
-  font-size: 1.2rem;
-}
-
 .message-box {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
   font-size: 1rem;
 }
@@ -78,18 +81,41 @@ label {
   background-color: var(--secondary);
   border: none;
   color: var(--primary);
-  font-size: 16px;
+  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
   font-weight: bold;
+  margin: 30px 0 10px 0;
   padding: 10px 20px;
   border-radius: 3px;
   width: 100%;
   font-family: 'Barlow', sans-serif;
-  justify-content: center;
-  text-align: center;
 }
 
 .submit:hover {
   background-color: var(--tertiary);
   transition: background-color 0.3s ease, transform 0.3s ease;
   transform: scale(1.05);
+}
+
+/* Tablet devices (768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-left-container {
+    width: 100%;
+    padding: 40px 100px 40px 100px;
+  }
+  
+  .map {
+    width: 100%;
+  }
+  
+  .contact-right-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 100px 20px 100px;
+  }
 }

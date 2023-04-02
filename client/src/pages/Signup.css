@@ -51,3 +51,14 @@ input {
     background-color: var(--secondary);
     padding: 10px 25px;
 }
+
+/* Tablet devices (768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .signup-padding {
+        padding-bottom: 34px;
+    }
+
+    .login-padding {
+        padding-bottom: 200px;
+    }
+}

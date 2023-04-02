@@ -37,7 +37,7 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
+    <div className="flex-row cart-overall">
       <div>
         <img
           src={`/images/${item.image}`}
@@ -56,7 +56,6 @@ const CartItem = ({ item }) => {
             />
           </div>
           <span
-            role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
             className="remove"
@@ -70,5 +69,3 @@ const CartItem = ({ item }) => {
 }
 
 export default CartItem;
-
-

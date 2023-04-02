@@ -8,11 +8,13 @@
     font-family: 'Barlow', sans-serif;
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
 }
 
 .order-history div h5 {
     font-family: 'Barlow', sans-serif;
     display: flex;
+    padding-left: 10px;
 }
 
 .card Link img {

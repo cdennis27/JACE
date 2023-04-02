@@ -57,8 +57,8 @@ console.log("tableId is already set = " + tableId);
   return (
     <div className="container my-1">
       <Link to="/signup" className="links-to-go">← Go to Signup</Link>
-      <div className="signup">
-        <h2>Welcome Back!</h2>
+      <div>
+        <h2 className="signup">Welcome Back!</h2>
 
         {error ? (
           <div>
@@ -67,7 +67,7 @@ console.log("tableId is already set = " + tableId);
         ) : null}
       </div>
 
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className="login-padding">
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
           <input

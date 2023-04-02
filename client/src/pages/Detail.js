@@ -96,7 +96,7 @@ function Detail() {
             </div>
 
             <div className="actions">
-            <h2 className="product-name">{currentProduct.name}</h2>
+              <h2 className="product-name">{currentProduct.name}</h2>
               <p className="product-price">
                 <strong>Price:</strong>${currentProduct.price}
               </p>
