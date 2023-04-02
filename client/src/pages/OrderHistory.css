@@ -40,7 +40,7 @@
 }
 
 /* Mobile devices (767px and below) */
-@media (max-width: 767px) {
+@media screen and (max-width: 480px) {
     .history {
         flex: 1 0 calc(100% - 20px);
         /* 100% width minus margins */
