@@ -21,6 +21,8 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Tables from './pages/Tables';
 import MenuDetail from './pages/MenuDetail';
+import Admin from './pages/Admin';
+import PendingOrders from './pages/PendingOrders';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -62,6 +64,10 @@ function App() {
                 element={<Signup />} 
               />
               <Route 
+                path="/admin" 
+                element={<Admin />} 
+              />
+              <Route 
                 path="/success" 
                 element={<Success />} 
               />
@@ -88,6 +94,10 @@ function App() {
               <Route
                 path="/tableOrder"
                 element={<Tables />}
+              />
+              <Route
+                path="/pendingOrders"
+                element={<PendingOrders />}
               />
               <Route 
                 path="*" 
