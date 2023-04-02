@@ -14,7 +14,7 @@
 
 .signup {
     text-align: center;
-    margin: 100px auto 0 auto;
+    margin: 0 auto 0 auto;
     width: 400px;
     padding: 30px 0 60px 0;
     font-family: 'Barlow', sans-serif;
@@ -52,13 +52,71 @@ input {
     padding: 10px 25px;
 }
 
+.submit:hover {
+    background-color: var(--tertiary);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
+}
+
 /* Tablet devices (768px and up) */
 @media (min-width: 768px) and (max-width: 1024px) {
+    label {
+        font-size: 18px;
+    }
+
+    .signup {
+        padding: 100px 0 30px 0;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 5px 5px;
+    }
+
     .signup-padding {
         padding-bottom: 34px;
     }
 
     .login-padding {
-        padding-bottom: 200px;
+        padding-bottom: 182px;
+    }
+}
+
+/* Phone view */
+@media (max-width: 480px) {
+    .links-to-go {
+        font-size: 14px;
+    }
+
+    .signup {
+        width: 200px;
+        padding: 60px 0 30px 0;
+        font-size: 22px;
+    }
+
+    form {
+        width: 200px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 15px;
+        padding: 5px 5px;
+    }
+
+    .submit {
+        font-size: 15px;
+        padding: 8px 25px;
+    }
+
+    .signup-padding {
+        padding-bottom: 34px;
+    }
+
+    .login-padding {
+        padding-bottom: 162px;
     }
 }
