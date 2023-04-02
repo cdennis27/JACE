@@ -45,7 +45,7 @@ input {
 
 .submit {
     width: 100%;
-    margin: 10px 0 0 0;
+    margin: 10px auto 0 auto;
     font-size: 18px;
     border-radius: 3px;
     background-color: var(--secondary);
@@ -53,9 +53,9 @@ input {
 }
 
 .submit:hover {
-    background-color: var(--tertiary);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1.05);
+  background-color: var(--tertiary);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.05);
 }
 
 /* Tablet devices (768px and up) */
@@ -89,27 +89,28 @@ input {
     }
 
     .signup {
-        width: 200px;
+        width: 300px;
         padding: 60px 0 30px 0;
         font-size: 22px;
     }
 
     form {
-        width: 200px;
+        width: 300px;
     }
 
     label {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     input {
-        font-size: 15px;
+        font-size: 16px;
         padding: 5px 5px;
     }
 
     .submit {
-        font-size: 15px;
-        padding: 8px 25px;
+        font-size: 16px;
+        padding: 7px 0px;
+        width: 300px;
     }
 
     .signup-padding {
@@ -117,6 +118,6 @@ input {
     }
 
     .login-padding {
-        padding-bottom: 162px;
+        padding-bottom: 134px;
     }
 }

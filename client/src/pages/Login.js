@@ -69,12 +69,13 @@ console.log("tableId is already set = " + tableId);
 
       <form onSubmit={handleFormSubmit} className="login-padding">
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email" className="label">Email:</label>
           <input
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
+            className="input"
           />
         </div>
         <div className="flex-row space-between my-2">
