@@ -37,7 +37,7 @@
 }
 
 .product-info {
-  color: black;
+  color: var(--primary);
   font-family: 'Barlow', sans-serif;
 }
 
@@ -60,6 +60,14 @@
     flex: 1 0 calc(50% - 20px); /* 50% width minus margins */
     max-width: calc(50% - 20px);
   }
+
+  .product-name {
+    font-size: 20px;
+  }
+  
+  .product-price {
+    font-size: 18px;
+  }
 }
 
 /* Mobile devices (767px and below) */
@@ -67,5 +75,14 @@
   .card {
     flex: 1 0 calc(100% - 20px); /* 100% width minus margins */
     max-width: calc(100% - 20px);
+    /* margin: 0px 10px; */
+  }
+
+  .product-name {
+    font-size: 18px;
+  }
+  
+  .product-price {
+    font-size: 16px;
   }
 }
