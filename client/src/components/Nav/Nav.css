@@ -57,6 +57,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .nav-header {
+    margin-bottom: 75px;
+  }
 }
 
 @media screen and (max-width: 480px) {
