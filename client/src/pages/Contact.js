@@ -118,11 +118,11 @@ function Contact() {
           <form className="contact-form" ref={form} onSubmit={sendEmail}>
             <label className="label">Name</label>
             <input type="text" name="user_name" className="input" onChange={handleName} onFocus={handleFocus} onBlur={handleBlur} />
-            <label>Email</label>
+            <label className="label">Email</label>
             <input type="email" name="user_email" className="input" onChange={handleEmail} onFocus={handleFocus} onBlur={handleBlur} />
-            <label>Message</label>
+            <label className="label">Message</label>
             <textarea placeholder="Enter message" name="message" className="input message-box" onChange={handleMessage} onFocus={handleFocus} onBlur={handleBlur} />
-            <input className="submit" type="submit" value="Send" />
+            <input className="contact-submit" type="submit" value="Send"/>
           </form>
           {errorMessage && (
             <div>
