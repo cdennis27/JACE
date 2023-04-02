@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 23px 0;
+  margin-bottom: 100px;
 }
 
 .nav-header h1 {
@@ -32,8 +33,8 @@
 }
 
 .nav-header ul li {
-  font-size: 1.3rem;
-  padding: 0.5rem;
+  font-size: 20px;
+  padding: 8px;
 }
 
 .logo-container {
@@ -56,13 +57,43 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nav-links {
-    font-size: 0.9rem;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .nav-links {
-    font-size: 0.8rem;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-header ul li {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .nav-header {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .nav-header ul {
+    margin: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-circle {
+    margin: 0;
+  }
+
+  .nav-header h1 {
+    margin: 5px 15px 0 0;
   }
 }
