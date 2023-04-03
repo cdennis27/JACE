@@ -6,7 +6,7 @@ import { QUERY_ALL_KITCHEN_ORDERS } from '../utils/queries';
 import { UPDATE_KITCHEN_ORDER } from '../utils/mutations';
 
 function PendingOrders() {
-  
+
   const valid = localStorage.getItem('employee');
   if (valid !== 'true') {
     window.location.assign('/login');
@@ -16,17 +16,17 @@ function PendingOrders() {
 
   if (data) {
     kitOrder = data;
-    console.log(kitOrder);
+    // console.log(kitOrder);
   }
 
   const [updateKitchenOrder] = useMutation(UPDATE_KITCHEN_ORDER);
 
   const handleUpdateOrder = async (event) => {
     event.preventDefault();
-    console.log(event.target);
+    // console.log(event.target);
     let id = event.target.name;
 
-    console.log(id);
+    // console.log(id);
     const mutationResponse = await updateKitchenOrder({
       variables: {
         id: id,
@@ -34,15 +34,15 @@ function PendingOrders() {
       },
       return: window.location.reload(),
     });
-    console.log("mutationResponse data");
+    // console.log("mutationResponse data");
     const status = mutationResponse.data.updateKitchenOrder.tableNumber;
-    console.log(status);
-    
+    // console.log(status);
+
   };
-  
+
   setTimeout(() => {
-    console.log('Order placed! You will now be redirected to the home page.');
-    
+    // console.log('Order placed! You will now be redirected to the home page.');
+
     window.location.reload();
   }, 5000);
   function stopFunction() {
@@ -50,28 +50,37 @@ function PendingOrders() {
     window.location.assign("/admin");
 
   };
-  
+
 
   return (
     <>
-      <div className="container my-1">
-        <Link to="/admin" clssName="links-to-go">← Admin</Link>
-        <Link to="/closing" className="links-to-go">← Closing</Link>
-        <h1 className="">Pending Orders</h1>
+      <div className="container my-1 overview">
+        <div className="link-tab-overview">
+          <Link to="/" className="link-tab">Home</Link>
+          <Link to="/pendingorders" className="link-tab-selected">Orders</Link>
+          <Link to="/admin" className="link-tab">Admin</Link>
+          <Link to="/closing" className="link-tab">Closing</Link>
+        </div>
 
         {kitOrder ? (
-          
+
           <div className="container-orders">
-            
+
             {kitOrder.kitchenOrder.map((order) => (
               <div key={order._id} className="order">
-                
-                <h5>
-                  {new Date(parseInt(order.purchaseDate)).toLocaleString()}
-                </h5>
-                <h5>
-                  Customer: {order.userName} Table: {order.tableNumber} 
-                </h5>
+                <div className='order-header'>
+                  <div className='order-header-one'>
+                    <h5 className='order-date'>
+                      {new Date(parseInt(order.purchaseDate)).toLocaleString()}
+                    </h5>
+                    <h5>
+                      Table: {order.tableNumber}
+                    </h5>
+                  </div>
+                  <h5>
+                    Customer: {order.userName}
+                  </h5>
+                </div>
 
                 {order.products.map(({ _id, name }, index) => (
                   <div key={index} className="products">
@@ -80,7 +89,7 @@ function PendingOrders() {
 
                   </div>
                 ))}
-              <a name={order._id} id={order.status} className="update-order order-status " onClick={handleUpdateOrder}>{order.status}</a>
+                <a name={order._id} id={order.status} className="update-order order-status" onClick={handleUpdateOrder}>{order.status}</a>
               </div>
             ))}
           </div>

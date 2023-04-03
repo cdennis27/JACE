@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
+.link-tab-overview {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.link-tab {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: var(--secondary) 3px solid;
+}
+
+.link-tab:hover {
+    border-bottom: var(--tertiary) 5px solid;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.link-tab-selected {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: var(--tertiary) 5px solid;
+}
+
+.link-tab-selected:hover {
+    border-bottom: var(--tertiary) 5px solid;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.order {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;    
+    background-color: #f5f5f5;
+    margin: 10px 10px 10px 10px;
+    padding: 0 0px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.order-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    color: var(--primary);
+    background-color: #bababa;
+    padding: 15px;
+}
+
+.order-header h5 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+}
+
+.order-date {
+    align-items: center;
+    text-align: center;
+}
+
+.order-header-one {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    color: var(--primary);
+    justify-content: space-between;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-wrap: normal;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 30px 0 30px 0;
+    border: none;
+    font-family: 'Barlow', sans-serif;
+}
+
+.products-items {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .link-tab-overview {
+        margin-bottom: 0px;
+    }
+
+    .link-tab {
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .link-tab-selected {
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .link-tab-overview {
+        margin-bottom: 0px;
+    }
+
+    .link-tab {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .link-tab-selected {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+}

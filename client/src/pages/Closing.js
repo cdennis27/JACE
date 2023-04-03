@@ -6,7 +6,7 @@ import { QUERY_ALL_KITCHEN_ORDERS } from '../utils/queries';
 import { UPDATE_KITCHEN_ORDER } from '../utils/mutations';
 
 function Closing() {
-    
+
   const valid = localStorage.getItem('employee');
   if (valid !== 'true') {
     window.location.assign('/login');
@@ -19,29 +19,38 @@ function Closing() {
     kitOrder = data;
     console.log(kitOrder);
   }
-  
-    
+
+
 
   return (
     <>
-      <div className="container my-1">
-        <Link to="/admin" className="links-to-go">← Admin</Link>
-        <Link to="/pendingorders" className="links-to-go">← Pending Orders</Link>
-        <h1 className="">Closing</h1>
+      <div className="container my-1 overview">
+        <div className="link-tab-overview">
+          <Link to="/" className="link-tab">Home</Link>
+          <Link to="/pendingorders" className="link-tab-selected">Orders</Link>
+          <Link to="/admin" className="link-tab">Admin</Link>
+          <Link to="/closing" className="link-tab">Closing</Link>
+        </div>
 
         {kitOrder ? (
-          
+
           <div className="container-orders">
-            
+
             {kitOrder.kitchenOrder.map((order) => (
               <div key={order._id} className="order">
-                
-                <h5>
-                  {new Date(parseInt(order.purchaseDate)).toLocaleString()}
-                </h5>
-                <h5>
-                  Customer: {order.userName} Table: {order.tableNumber} 
-                </h5>
+                <div className='order-header'>
+                  <div className='order-header-one'>
+                    <h5 className='order-date'>
+                      {new Date(parseInt(order.purchaseDate)).toLocaleString()}
+                    </h5>
+                    <h5>
+                      Table: {order.tableNumber}
+                    </h5>
+                  </div>
+                  <h5>
+                    Customer: {order.userName}
+                  </h5>
+                </div>
 
                 {order.products.map(({ _id, name }, index) => (
                   <div key={index} className="products">
@@ -50,7 +59,7 @@ function Closing() {
 
                   </div>
                 ))}
-              <a name={order._id} id={order.status} className="update-order order-status " >{order.status}</a>
+                <a name={order._id} id={order.status} className="update-order order-status" onClick={handleUpdateOrder}>{order.status}</a>
               </div>
             ))}
           </div>
