@@ -83,28 +83,25 @@ SCREENSHOTS AND SUCH GO HERE!
 <br>
 Login From QR Scan
 <br>
-![image](https://user-images.githubusercontent.com/114437149/229626941-b6bbc0d3-d396-4811-8f16-79801707e33b.png)
-<br>
 
 <br>
 Menu
 <br>
 
 <br>
-Checkout
+Menu Item Detail
 <br>
 
 <br>
-
+Stripe Integration on Checkout
 <br>
 
 <br>
+Restauraunt/Kitchen View
 <br>
 
 <br>
-<br>
-
-<br>
+Order Page for Kitchen
 <br>
 
 ## Contributing
