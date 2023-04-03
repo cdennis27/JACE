@@ -8,14 +8,14 @@ import "./Admin.css";
 import { ADD_USER, UPDATE_EMPLOYEE } from '../utils/mutations';
 
 function Admin(props) {
-  
+
   const valid = localStorage.getItem('employee');
   if (valid !== 'true') {
     window.location.assign('/login');
   }
   function stopFunction() {
     clearTimeout(setTimeout);
-    
+
 
   };
   stopFunction = setTimeout(stopFunction, 0);
@@ -27,16 +27,16 @@ function Admin(props) {
   const { loading, data } = useQuery(QUERY_ALL_USERS);
 
   const profiles = data?.users || [];
-  
+
   console.log(profiles);
-   
+
 
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [updateEmployee] = useMutation(UPDATE_EMPLOYEE);
 
   const handleUpdateEmployee = async (event) => {
     event.preventDefault();
-   
+
     let id = event.target.name;
     console.log(id);
     const mutationResponse = await updateEmployee({
@@ -49,22 +49,21 @@ function Admin(props) {
 
   };
 
-  
-  return (
-    <div className="container my-1">
-      <Link to="/" className="links-to-go">← Go Home</Link>
-      <Link to="/pendingorders" className="links-to-go">← Pending Orders</Link>
-      <Link to="/closing" className="links-to-go">← Closing</Link>
 
-      <h2>Admin</h2>
-     
-      <div className="">
+  return (
+    <div className="container my-1 overview">
+      <div className="link-tab-overview">
+        <Link to="/" className="link-tab">Home</Link>
+        <Link to="/pendingorders" className="link-tab">Orders</Link>
+        <Link to="/admin" className="link-tab-selected">Admin</Link>
+        <Link to="/closing" className="link-tab">Closing</Link>
+      </div>
+
+      <div className="users">
         {profiles.map((profile) =>
-          <div key={profile.lastName} className="">
-            <div className="">
-              <h4 className="">{profile._id} {profile.firstName} {profile.lastName} {profile.employee}</h4>
+          <div key={profile.lastName} className="users-each">
+              <h4 className="">{profile.firstName} {profile.lastName}</h4>
               <a name={profile._id} id={profile._id} className="update" onClick={handleUpdateEmployee}>{profile.employee}</a>
-            </div>
           </div>
         )}
       </div>
