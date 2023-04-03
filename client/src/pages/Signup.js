@@ -8,9 +8,11 @@ import './Signup.css';
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
-
+  
+//addUser function is called when the form is submitted
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log("HANDLE FORM SUBMIT");
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
@@ -18,8 +20,14 @@ function Signup(props) {
         firstName: formState.firstName,
         lastName: formState.lastName,
       },
+      
     });
     const token = mutationResponse.data.addUser.token;
+    console.log("mutationResponse data");
+    console.log(mutationResponse.data);
+    localStorage.setItem("mutationResponse", JSON.stringify(mutationResponse.data));
+    console.log("token");
+    console.log(token);
     Auth.login(token);
   };
 

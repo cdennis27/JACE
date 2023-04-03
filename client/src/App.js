@@ -24,6 +24,7 @@ import MenuDetail from './pages/MenuDetail';
 import Admin from './pages/Admin';
 import PendingOrders from './pages/PendingOrders';
 import Receipt from './pages/Receipt';
+import Closing from './pages/Closing';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -97,12 +98,16 @@ function App() {
                 element={<Tables />}
               />
               <Route
-                path="/pendingOrders"
+                path="/pendingorders"
                 element={<PendingOrders />}
               />
               <Route
                 path="/receipt"
                 element={<Receipt />}
+              />
+              <Route
+                path="/closing"
+                element={<Closing />}
               />
               <Route 
                 path="*" 

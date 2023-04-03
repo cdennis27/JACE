@@ -64,7 +64,7 @@ function Contact() {
 
   const handleBlur = (e) => {
     e.preventDefault();
-
+console.log(form.current);
     console.log(newName);
     if (!validateInput(e.target.value)) {
       setErrorMessage('Please enter a valid input!')

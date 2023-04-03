@@ -16,6 +16,8 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
+
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
@@ -39,6 +41,29 @@ export const QUERY_ALL_PRODUCTS = gql`
   }
 `;
 
+export const QUERY_ALL_KITCHEN_ORDERS = gql`
+query {
+  kitchenOrder {
+    _id
+    purchaseDate
+    purchaseTime
+    tableNumber
+    status
+    userName
+    products {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+
+      
+    }
+  }
+}
+`;
+
 export const QUERY_CATEGORIES = gql`
   {
     categories {
@@ -54,6 +79,7 @@ export const QUERY_USER = gql`
       firstName
       lastName
       employee
+      email
       orders {
         _id
         purchaseDate
@@ -73,6 +99,7 @@ export const QUERY_USER = gql`
 export const QUERY_ALL_USERS = gql`
 query {
   users {
+    _id
     email
     firstName
     lastName

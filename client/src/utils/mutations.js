@@ -29,24 +29,72 @@ export const ADD_ORDER = gql`
     }
   }
 `;
+//
+
+export const ADD_KITCHEN_ORDER = gql`
+  mutation addKitchenOrder(
+    $products: [ID]!
+    $tableNumber: String!
+    $userName: String!
+  ) {
+    addKitchenOrder(
+      products: $products
+      tableNumber: $tableNumber
+      userName: $userName
+    ) {
+      products {
+        _id
+        name
+
+      }
+      purchaseDate
+    }
+  }
+`;
+
+
+export const UPDATE_KITCHEN_ORDER = gql`
+  mutation updateKitchenOrder($id: ID!) {
+    updateKitchenOrder (
+      _id: $id
+      ) {
+        tableNumber
+    }
+  }
+  `;
+
+//
+export const UPDATE_EMPLOYEE = gql`
+  mutation updateEmployee($id: ID!) {
+    updateEmployee (
+      _id: $id
+      ) {
+        employee
+    }
+  }
+  `;
+
+
+
 
 export const ADD_USER = gql`
   mutation addUser(
-    $firstName: String!
+  $firstName: String!
     $lastName: String!
     $email: String!
     $password: String!
-  ) {
-    addUser(
-      firstName: $firstName
+) {
+  addUser(
+    firstName: $firstName
       lastName: $lastName
       email: $email
       password: $password
-    ) {
-      token
+  ) {
+    token
       user {
-        _id
-      }
+      _id
+      email
     }
   }
+}
 `;

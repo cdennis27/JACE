@@ -24,17 +24,18 @@ function Success() {
     localStorage.setItem('userName', JSON.stringify(user));
   }
 
- //
+  //
   useEffect(() => {
     async function saveOrder() {
       const cart = await idbPromise('cart', 'get');
       const products = [];
+      const productsList = [];
       console.log("cart");
       console.log(cart);
 
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      const kitchenOrder = cart.map((item) => item);
+      const kitchenOrder = cart.map((item) => item._id);
       console.log("kitchenOrder");
       console.log(kitchenOrder);
       localStorage.setItem("kitchenOrder", JSON.stringify(kitchenOrder));
@@ -46,31 +47,53 @@ function Success() {
           console.log(item.name);
           console.log(item.purchaseQuantity);
           products.push(item._id);
+          productsList.push(item._id, item.name);
+
           localStorage.setItem("productsProper", products);
         }
         console.log("state.cart item");
         localStorage.setItem("products", JSON.stringify(products));
+        localStorage.setItem("productsList", JSON.stringify(productsList));
         console.log("products");
         console.log(products);
       });
 
       //test code below addKitchenOrder
-      
+
       console.log("products");
       console.log(products);
       console.log("tableNumber");
       console.log(localStorage.getItem("tableId"));
-      console.log("userName");
+
       const userName = (localStorage.getItem("userName"));
+      console.log("userName");
       const userCurrent = JSON.parse(userName);
       console.log(userCurrent.firstName);
       console.log(userCurrent.lastName);
+      const nombre = (userCurrent.firstName);
+      console.log("nombre");
+      console.log(nombre);
+      console.log(productsList);
+      const tableNumber = localStorage.getItem("tableId");
 
       //
+      const mutationResponse = await addKitchenOrder({
+        variables: {
+          products: products,
+          tableNumber: tableNumber,
+          userName: nombre,
+        },
 
-      
+      });
+      const kitorder = mutationResponse.data.addKitchenOrder;
+      //console.log("data");
+      //onsole.log(mutationResponse.data);
+      console.log("kitorder");
+      console.log(kitorder);
+      localStorage.setItem("addKitchecnMutationResponse", JSON.stringify(mutationResponse.data));
 
 
+      //
       /*
             if (products.length) {
               localStorage.getItem("productsProper", products);
@@ -108,11 +131,11 @@ function Success() {
         localStorage.setItem("tableId", "");
         console.log(localStorage.getItem("tableId"));
         window.location.assign('/receipt');
-      }, 30000);
+      }, 30);
     }
 
     saveOrder();
-    
+
   }, [addOrder, addKitchenOrder]);
 
   return (

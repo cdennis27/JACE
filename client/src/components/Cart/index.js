@@ -13,7 +13,7 @@ require('dotenv').config();
 // TODO: Add a comment describing the functionality of loadStripe
 // Your comment here
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+const stripePromise = loadStripe('pk_test_51MWsBqFedoDMRamPBsp4YRZEOTRVhMECzdszYpVVduHdCkuoBnZSyk6G7UpjWFIk0VVfIcVUwPhX2SbGhtWpQjSE00UplXsjGu');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -60,9 +60,16 @@ const Cart = () => {
     const productIds = [];
 
     state.cart.forEach((item) => {
+      
       for (let i = 0; i < item.purchaseQuantity; i++) {
+        console.log(item.name);
+        console.log(item.purchaseQuantity);
         productIds.push(item._id);
+        localStorage.setItem("productsId", productIds);
       }
+      console.log("state.cart item");
+      
+
     });
 
     getCheckout({
@@ -70,7 +77,7 @@ const Cart = () => {
     });
   }
 
- if (!state.cartOpen) {
+  if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
