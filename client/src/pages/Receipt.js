@@ -99,9 +99,9 @@ function Receipt() {
 
         <section>
             <div className="receiptHeader">
-                <h2>💸👍Thanks {userCurrent.firstName}</h2>
+                <h2>Thank you, {userCurrent.firstName}</h2>
                 <h2>Your server will bring your order when ready!</h2>
-                <h4>Feel free to save this receipt or send an e-mail copy of your receipt.</h4>
+                <h4>Feel free to save this receipt or get an email copy.</h4>
             </div>
             <div className="contact">
 

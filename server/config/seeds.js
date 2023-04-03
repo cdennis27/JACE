@@ -48,7 +48,7 @@ db.once('open', async () => {
       name: "No Carbs",
       category: categories[0]._id,
       description:
-        'Double smoked bacon with eggs cooked any style. Served with potato wedges and cooked vegetables. Can substitute potato wedges for hash browns or french fries. [1020 Cals]',
+        'Double smoked bacon with eggs cooked any style. Served with cooked vegetables. [1020 Cals]',
       image: 'no-carbs.png',
       price: 13.99,
       quantity: 50
@@ -66,7 +66,7 @@ db.once('open', async () => {
       name: "Bacon, Pancake & Eggs",
       category: categories[0]._id,
       description:
-        'Double smoked bacon with eggs cooked andy style and pancakes. Served with toast and potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [1050 Cals] ',
+        'Double smoked bacon with eggs cooked any style and pancakes. Served with toast and potato wedges. Can substitute potato wedges for hash browns, french fries or cooked vegetables. [1050 Cals] ',
       image: 'bacon-pancake-and-eggs.png',
       price: 13.99,
       quantity: 30

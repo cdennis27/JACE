@@ -42,7 +42,7 @@
 }
 
 /* Tablet view */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .footer {
     margin-top: 75px;
   }

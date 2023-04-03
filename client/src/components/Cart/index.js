@@ -10,17 +10,12 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 require('dotenv').config();
 
-// TODO: Add a comment describing the functionality of loadStripe
-// Your comment here
-
 const stripePromise = loadStripe('pk_test_51MWsBqFedoDMRamPBsp4YRZEOTRVhMECzdszYpVVduHdCkuoBnZSyk6G7UpjWFIk0VVfIcVUwPhX2SbGhtWpQjSE00UplXsjGu');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  // TODO: Add a comment describing the functionality of the useEffect hook in this instance
-  // Your comment here
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -29,8 +24,6 @@ const Cart = () => {
     }
   }, [data]);
 
-  // TODO: Add a comment describing what data we are watching and what work should be preformed if that data changes
-  // Your comment here
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -54,13 +47,11 @@ const Cart = () => {
     return sum.toFixed(2);
   }
 
-  // TODO: Add a comment describing the functionality of our submitCheckout function.
-  // Your comment here
   function submitCheckout() {
     const productIds = [];
 
     state.cart.forEach((item) => {
-      
+
       for (let i = 0; i < item.purchaseQuantity; i++) {
         console.log(item.name);
         console.log(item.purchaseQuantity);
@@ -68,7 +59,7 @@ const Cart = () => {
         localStorage.setItem("productsId", productIds);
       }
       console.log("state.cart item");
-      
+
 
     });
 
@@ -81,7 +72,7 @@ const Cart = () => {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
-        🍽️
+          🍽️
         </span>
       </div>
     );
@@ -90,7 +81,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-      x
+        x
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -103,17 +94,17 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
           </div>
           {Auth.loggedIn() ? (
-              <button onClick={submitCheckout} className="checkout-btn">Checkout</button>
-            ) : (
-              <span>(log in to check out)</span>
-            )}
+            <button onClick={submitCheckout} className="checkout-btn">Checkout</button>
+          ) : (
+            <span>(log in to check out)</span>
+          )}
         </div>
       ) : (
         <h7>
           <span role="img" aria-label="shocked">
             😱
           </span>
-           You haven't added anything to your plate yet!
+          You haven't added anything to your plate yet!
         </h7>
       )}
     </div>
