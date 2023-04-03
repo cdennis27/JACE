@@ -132,22 +132,22 @@ Please note that we will not be accepting open-source contributions to the code 
 
 If you have any questions, suggestions, or would like to get in touch with the JACE team, feel free to reach out to us through the following contact information:
 
-1. **Joshua Orlando**
+1. **Joshua **
    - GitHub: [JoshuaOrlandoR](https://github.com/JoshuaOrlandoR)
    - Email: joshuaorlando.r@gmail.com
    - LinkedIn: [Placeholder for now! Fixing up my LinkedIn currently ](https://www.linkedin.com/in/username-j)
 
-2. **A**
-   - GitHub: [https://github.com/username-a](https://github.com/username-a)
-   - Email: a@example.com
-   - LinkedIn: [https://www.linkedin.com/in/username-a](https://www.linkedin.com/in/username-a)
+2. **Anthony**
+   - GitHub: [Tonnyoffor](https://github.com/Tonyoffor)
+   - Email: tonyc.offor@gmail.com
+   - LinkedIn: [https://www.linkedin.com/in/username-a](https://www.linkedin.com/in/anthony-offor/)
 
-3. **C**
-   - GitHub: [https://github.com/username-c](https://github.com/username-c)
-   - Email: c@example.com
-   - LinkedIn: [https://www.linkedin.com/in/username-c](https://www.linkedin.com/in/username-c)
+3. **Cezar**
+   - GitHub: [cdennis27](https://github.com/cdennis27)
+   - Email: cezardenis20@gmail.com
+   - LinkedIn: [Placeholder](https://www.linkedin.com/in/username-c)
 
-4. **E**
+4. **Esther**
    - GitHub: [https://github.com/username-e](https://github.com/username-e)
    - Email: e@example.com
    - LinkedIn: [https://www.linkedin.com/in/username-e](https://www.linkedin.com/in/username-e)
