@@ -65,7 +65,7 @@ const resolvers = {
     kitchenOrder: async () => {
       const kitchenOrder = await KitOrder.find().populate('products');
       //console.log(user);
-      console.log(kitchenOrder.length);
+      console.log("kitchen order query at resolver");
 
       console.log(kitchenOrder);
       return kitchenOrder;
@@ -129,7 +129,7 @@ const resolvers = {
     },
     
     updateKitchenOrder: async (parent, { _id }) => {
-      console.log("updateKitchenOrder at resolver right now: ");
+      
       const kitorder = await KitOrder.findById(_id);
       var status = kitorder.status;
 
@@ -153,6 +153,14 @@ const resolvers = {
       
       return await KitOrder.findByIdAndUpdate(_id, { status: status }, { new: true });
     },
+    deleteKitchenOrders: async (parent, { ids }) => {
+     
+      const all = await KitOrder.deleteMany(ids);
+     
+      console.log("DELETE KITCHEN ORDER at resolver right now: ");
+
+      return all;
+    },
 
 
     addOrder: async (parent, { products }, context) => {
@@ -163,7 +171,7 @@ const resolvers = {
         console.log("*** order  *****");
         console.log(order);
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
-        await User.findByIdAndUpdate("6427a9980524e04279b133d5", { employee: "true" });
+        
               
         return order;
       }

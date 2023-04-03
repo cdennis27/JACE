@@ -32,10 +32,10 @@ class AuthService {
     localStorage.setItem('id_token', idToken);
     var tableId = localStorage.getItem("tableId");
     var employee = localStorage.getItem("employee");
-    console.log(employee);
+    
     
 
-    if (employee == "true") {
+    if (employee === "true") {
       console.log("Employee!!");
       window.location.assign('/admin');
     } else if (tableId === null || tableId === undefined || tableId === "") {

@@ -63,6 +63,15 @@ export const UPDATE_KITCHEN_ORDER = gql`
   }
   `;
 
+export const DELETE_KITCHEN_ORDERS = gql`
+  mutation deleteKitchenOrders($_id: [ID!]) {
+    deleteKitchenOrders(_id: $_id) {
+      _id
+      status 
+    }
+  }
+  `;
+
 //
 export const UPDATE_EMPLOYEE = gql`
   mutation updateEmployee($id: ID!) {

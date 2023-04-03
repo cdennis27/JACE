@@ -19,16 +19,9 @@ console.log("tableId is already set = " + tableId);
     tableId = "";
   }
   
-  console.log("tempTableId=" + tempTableId);
-  console.log(tableId);
-
-
-
-
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
   
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {

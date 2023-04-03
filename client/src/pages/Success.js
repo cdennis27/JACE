@@ -91,30 +91,7 @@ function Success() {
       console.log("kitorder");
       console.log(kitorder);
       localStorage.setItem("addKitchecnMutationResponse", JSON.stringify(mutationResponse.data));
-
-
-      //
-      /*
-            if (products.length) {
-              localStorage.getItem("productsProper", products);
-              const { data } = await addKitchenOrder({
-                variables: {
-                  products: products,
-                  tableNumber: localStorage.getItem("tableId"),
-                  userName: user,
-      
-                }
-              });
-              console.log("Kitchendata");
-              const productData = data.addKitchenOrder;
-              localStorage.setItem('kitchenOrder', JSON.stringify(productData));
-      
-            }
-      */
-      //up here
-      ///
-
-
+   
       if (products.length) {
         const { data } = await addOrder({ variables: { products } });
         console.log("data");
@@ -128,10 +105,9 @@ function Success() {
 
       setTimeout(() => {
         console.log('Order placed! You will now be redirected to the home page.');
-        localStorage.setItem("tableId", "");
-        console.log(localStorage.getItem("tableId"));
+        
         window.location.assign('/receipt');
-      }, 30);
+      }, 3000);
     }
 
     saveOrder();

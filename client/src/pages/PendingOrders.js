@@ -35,8 +35,7 @@ function PendingOrders() {
       return: window.location.reload(),
     });
     console.log("mutationResponse data");
-    const status = mutationResponse.data.updateKitchenOrder.tableNumber;
-    console.log(status);
+    
     
   };
   
@@ -55,7 +54,7 @@ function PendingOrders() {
   return (
     <>
       <div className="container my-1">
-        <Link to="/admin" clssName="links-to-go">← Admin</Link>
+        <Link to="/admin" className="links-to-go">← Admin</Link>
         <Link to="/closing" className="links-to-go">← Closing</Link>
         <h1 className="">Pending Orders</h1>
 

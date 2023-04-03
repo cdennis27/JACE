@@ -9,6 +9,7 @@ function Receipt() {
     var newName = newName;
     var newEmail = newEmail;
     var newMessage = newMessage;
+    var newCart = newCart //added this
     const cart = JSON.parse(localStorage.getItem("cart"));
     console.log("cart");
     console.log(cart);
@@ -26,6 +27,15 @@ function Receipt() {
     const delay = ms => new Promise(res => setTimeout(res, ms));
 
     const [errorMessage, setErrorMessage] = useState('');
+
+    function formatCart(cart) {
+        let total = 0;
+        let items = cart.map(item => {
+            total += item.price;
+            return `${item.name} - $${item.price.toFixed(2)}\n\n`
+        }).join('');
+        return `\n ${items}Total: $${total.toFixed(2)}`
+    }
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -44,6 +54,8 @@ function Receipt() {
                 await delay(2000);
                 clearForm();
                 setErrorMessage("");
+                localStorage.setItem("tableId", "");
+                console.log(localStorage.getItem("tableId"));
                 return window.location.assign('/tableOrder');;
 
 
@@ -93,8 +105,13 @@ function Receipt() {
     const clearForm = () => {
         form.current.reset();
     };
+    const handleCart = (e) => {
+        e.preventDefault();
 
-    
+        return newCart = e.target.value
+    }
+
+
     return (
 
         <section>
@@ -118,6 +135,8 @@ function Receipt() {
                         <label className="label hidden">Email</label>
                         <input type="email" name="user_email" className="hidden" defaultValue="jace1971@yahoo.com" onChange={handleEmail} onFocus={handleFocus} onBlur={handleBlur} />
                         <label className="label hidden">Message</label>
+                        <label className="label hidden">Cart</label>
+                        <input type="text" name="cart" className="hidden" defaultValue={`\n${formatCart(cart)}`} onChange={handleCart} />
                         <textarea name="message" className="hidden message-box" defaultValue={userCurrent.email} onChange={handleMessage} onFocus={handleFocus} onBlur={handleBlur} />
                         <input className="submit" type="submit" value="Send" />
                     </form>

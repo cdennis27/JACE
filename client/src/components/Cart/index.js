@@ -10,17 +10,12 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 require('dotenv').config();
 
-// TODO: Add a comment describing the functionality of loadStripe
-// Your comment here
-
 const stripePromise = loadStripe('pk_test_51MWsBqFedoDMRamPBsp4YRZEOTRVhMECzdszYpVVduHdCkuoBnZSyk6G7UpjWFIk0VVfIcVUwPhX2SbGhtWpQjSE00UplXsjGu');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  // TODO: Add a comment describing the functionality of the useEffect hook in this instance
-  // Your comment here
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -29,8 +24,6 @@ const Cart = () => {
     }
   }, [data]);
 
-  // TODO: Add a comment describing what data we are watching and what work should be preformed if that data changes
-  // Your comment here
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -54,8 +47,6 @@ const Cart = () => {
     return sum.toFixed(2);
   }
 
-  // TODO: Add a comment describing the functionality of our submitCheckout function.
-  // Your comment here
   function submitCheckout() {
     const productIds = [];
 
@@ -69,7 +60,6 @@ const Cart = () => {
       }
       console.log("state.cart item");
       
-
     });
 
     getCheckout({

@@ -16,7 +16,7 @@ function OrderHistory() {
   return (
     <>
       <div className="container my-1">
-        <Link to="/" className="links-to-go">← Back to Products</Link>
+        <Link to="/tableOrder" className="links-to-go">← Back to Products</Link>
 
         {user ? (
           <div className="space-between my-2 order-history">

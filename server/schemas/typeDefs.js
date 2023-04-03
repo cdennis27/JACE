@@ -75,6 +75,7 @@ const typeDefs = gql`
     addOrder(products: [ID]!): Order
     addKitchenOrder(products: [ID]!, tableNumber: String!, userName: String!): KitchenOrder
     updateKitchenOrder(_id: ID!): KitchenOrder
+    deleteKitchenOrders(_id: [ID!]): KitchenOrder
     updateUser(firstName: String, lastName: String, email: String, password: String, employee: String): User
     updateEmployee(_id: ID!): Users
     updateProduct(_id: ID!, quantity: Int!): Product

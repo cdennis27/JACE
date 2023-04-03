@@ -24,10 +24,9 @@ function Signup(props) {
     });
     const token = mutationResponse.data.addUser.token;
     console.log("mutationResponse data");
-    console.log(mutationResponse.data);
-    localStorage.setItem("mutationResponse", JSON.stringify(mutationResponse.data));
-    console.log("token");
-    console.log(token);
+    console.log(mutationResponse.data.addUser.user);
+    localStorage.setItem("mutationResponse", JSON.stringify(mutationResponse.data.addUser.user));
+    localStorage.setItem("employee", "false");
     Auth.login(token);
   };
 
