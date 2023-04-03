@@ -120,6 +120,7 @@ Order Page for Kitchen
 
 <br>
 QR Codes for Routing 
+
 ![image](https://user-images.githubusercontent.com/114437149/229637721-b164c2b6-0735-4008-ac46-dd4855fbcf9a.png)
 
 <br>
