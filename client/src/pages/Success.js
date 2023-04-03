@@ -141,7 +141,7 @@ function Success() {
   return (
     <div className="success-children">
       <Jumbotron>
-        <h2>💸👍</h2>
+        <h1>💸👍</h1>
         <h2>Your server will bring your order when ready!</h2>
         <h4>You will now be redirected to your receipt</h4>
       </Jumbotron>

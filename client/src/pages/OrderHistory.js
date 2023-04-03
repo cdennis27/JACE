@@ -32,12 +32,14 @@ function OrderHistory() {
                   {order.products.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="card px-1 py-1">
                       <Link to={`/products/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} />
-                        <p>{name}</p>
+                        <div className='img-container'>
+                          <img alt={name} src={`/images/${image}`} />
+                        </div>
+                        <div className="product-info">
+                        <p className='product-name'>{name}</p>
+                        <p className='product-price'>${price}</p>
+                        </div>
                       </Link>
-                      <div>
-                        <span>${price}</span>
-                      </div>
                     </div>
                   ))}
                 </div>

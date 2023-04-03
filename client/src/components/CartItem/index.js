@@ -37,7 +37,7 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
+    <div className="flex-row cart-overall">
       <div>
         <img
           src={`/images/${item.image}`}
@@ -45,7 +45,10 @@ const CartItem = ({ item }) => {
         />
       </div>
       <div className="cart-item">
-        <div>{item.name} ${item.price}</div>
+        <div className="quantity-remove">
+            <div className="quantity">{item.name}</div>
+            <div className="remove">{item.price}</div>
+        </div>
         <div className="quantity-remove">
           <div className="quantity">
             <span>Qty:</span>
@@ -56,7 +59,6 @@ const CartItem = ({ item }) => {
             />
           </div>
           <span
-            role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
             className="remove"

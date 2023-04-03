@@ -38,16 +38,19 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+app.get('/*', (req, res) => { 
+  if (process.env.NODE_ENV === 'production') {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  } else {
+  res.sendFile(path.join(__dirname, '../client/'));
+  }
 });
-/*
-app.get('/sucess', async (req, res) => {
-  const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-  const customer = await stripe.customers.retrieve(session.customer);
-  res.send(`<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`);
+
+app.get('/serviceWorker.js', (req, res) => {
+  res.setHeader('Content-Type', 'application/javascript');
+  res.sendFile(path.join(__dirname, '../client/src/serviceWorker.js'));
 });
-*/
+
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
