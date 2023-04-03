@@ -112,7 +112,7 @@ Please note that we will not be accepting open-source contributions to the code 
 
 ## License
 
-SOMETHING GOES HERE
+
 
 ## Collaborators
 
