@@ -82,26 +82,40 @@ SCREENSHOTS AND SUCH GO HERE!
 
 <br>
 Login From QR Scan
+
+![image](https://user-images.githubusercontent.com/114437149/229633972-3b2217cc-696c-4592-9862-f06d42d028c8.png)
+
 <br>
 
 <br>
 Menu
+
+![image](https://user-images.githubusercontent.com/114437149/229634026-ded752b1-f16d-4000-9f7a-c4e6c2fa82e0.png)
+
 <br>
 
 <br>
 Menu Item Detail
+
+![image](https://user-images.githubusercontent.com/114437149/229634069-480b4eb2-eebf-4e45-bb55-40d230f62ade.png)
+
 <br>
 
 <br>
-Stripe Integration on Checkout
-<br>
+Stripe Integration on Checkout and Success Page
 
-<br>
-Restauraunt/Kitchen View
+![image](https://user-images.githubusercontent.com/114437149/229634129-4b0b661f-e19a-4ed9-864a-5750914d6096.png)
+
+![image](https://user-images.githubusercontent.com/114437149/229634297-df347c0c-0399-4971-a130-544c86553576.png)
+
+
 <br>
 
 <br>
 Order Page for Kitchen
+
+![image](https://user-images.githubusercontent.com/114437149/229634350-153a2caa-2932-439c-98fe-dd0a7e9bf5e1.png)
+
 <br>
 
 ## Contributing
