@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin: 30px 0 10px 0;
 }
 
@@ -65,7 +66,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'Barlow', sans-serif;
-    padding: 0  0 25px 0;
+    padding: 0 0 25px 0;
 }
 
 .company-details {
@@ -95,4 +96,72 @@ tr {
 .os-total {
     border-bottom: none !important;
     font-size: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+    .text-header-ty {
+        font-size: 22px;
+    }
+
+    .text-header-h3 {
+        font-size: 22px;
+    }
+    
+    .textHeader h4 {
+        font-size: 19px;
+    }
+
+    .email-send {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .receiptHeader {
+        width: 70%;
+    }
+
+    table,
+    th,
+    td {
+        padding: 10px 30px 10px 10px;
+        margin: 10px 0;
+        border-collapse: collapse;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-header-ty {
+        font-size: 22px;
+    }
+
+    .text-header-h3 {
+        font-size: 22px;
+    }
+    
+    .textHeader h4 {
+        font-size: 19px;
+    }
+
+    .email-send {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .receiptHeader {
+        width: 90%;
+    }
+
+    table,
+    th,
+    td {
+        padding: 10px 30px 10px 10px;
+        margin: 10px 0;
+        border-collapse: collapse;
+    }
 }
