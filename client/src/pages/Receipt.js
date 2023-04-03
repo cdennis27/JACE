@@ -94,24 +94,26 @@ function Receipt() {
         form.current.reset();
     };
 
-    
+    function calculateTotal() {
+        let sum = 0;
+        cart.forEach((item) => {
+            sum += item.price * item.purchaseQuantity;
+        });
+        return sum.toFixed(2);
+    }
+
+
     return (
-
-        <section>
-            <div className="receiptHeader">
-                <h2>Thank you, {userCurrent.firstName}</h2>
-                <h2>Your server will bring your order when ready!</h2>
-                <h4>Feel free to save this receipt or get an email copy.</h4>
+        <section className='container'>
+            <Link to="/" className="links-to-go">← Home</Link>
+            <div className="textHeader">
+                <h3 className='text-header-ty'>Thank you for your order, {userCurrent.firstName}</h3>
+                <h3 className='text-header-h3'>Your server will bring your order when ready!</h3>
+                <h4>👇 Feel free to save this receipt or get an email copy 👇</h4>
             </div>
+
             <div className="contact">
-
-
-
                 <div className="receipt">
-                    <h1>
-                        <Link to="/tableOrder" className="links-to-go">← Back Home</Link>
-                    </h1>
-
                     <form className="contact-form" ref={form} onSubmit={sendEmail}>
                         <label className="label hidden">Name</label>
                         <input type="text" name="user_name" className="hidden" defaultValue={userCurrent.firstName} onChange={handleName} />
@@ -119,7 +121,7 @@ function Receipt() {
                         <input type="email" name="user_email" className="hidden" defaultValue="jace1971@yahoo.com" onChange={handleEmail} onFocus={handleFocus} onBlur={handleBlur} />
                         <label className="label hidden">Message</label>
                         <textarea name="message" className="hidden message-box" defaultValue={userCurrent.email} onChange={handleMessage} onFocus={handleFocus} onBlur={handleBlur} />
-                        <input className="submit" type="submit" value="Send" />
+                        <input className="submit email-send" type="submit" value="Send" />
                     </form>
                 </div>
                 {errorMessage && (
@@ -127,8 +129,35 @@ function Receipt() {
                         <p className="error-message">{errorMessage}</p>
                     </div>
                 )}
-
             </div>
+            <div className='before-receipt'>
+                <div className='receiptHeader'>
+                    <h1 className='company-name'>JACE</h1>
+                    <div className='receipt-details'>
+                        <p className='company-details'>Phone: 123-456-7890</p>
+                        <p className='company-details'>Address: 130 St George St, Toronto</p>
+                    </div>
+
+                    <table className="table">
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                        {cart.map((item) => (
+                            <tr key={item.id}>
+                                <td>{item.name}</td>
+                                <td>${item.price}</td>
+                            </tr>
+                        ))}
+                        <tr className='os-total'>
+                            <td colspan="2"><strong>Total: ${calculateTotal()}</strong></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+
 
         </section>
     );

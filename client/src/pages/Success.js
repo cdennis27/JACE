@@ -131,7 +131,7 @@ function Success() {
         localStorage.setItem("tableId", "");
         console.log(localStorage.getItem("tableId"));
         window.location.assign('/receipt');
-      }, 30);
+      }, 1000);
     }
 
     saveOrder();
