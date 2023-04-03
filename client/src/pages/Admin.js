@@ -52,8 +52,8 @@ function Admin(props) {
 
   return (
     <div className="container my-1 overview">
+      <Link to="/" className="links-to-go">← Home</Link>
       <div className="link-tab-overview">
-        <Link to="/" className="link-tab">Home</Link>
         <Link to="/pendingorders" className="link-tab">Orders</Link>
         <Link to="/admin" className="link-tab-selected">Admin</Link>
         <Link to="/closing" className="link-tab">Closing</Link>
@@ -62,8 +62,8 @@ function Admin(props) {
       <div className="users">
         {profiles.map((profile) =>
           <div key={profile.lastName} className="users-each">
-              <h4 className="">{profile.firstName} {profile.lastName}</h4>
-              <a name={profile._id} id={profile._id} className="update" onClick={handleUpdateEmployee}>{profile.employee}</a>
+            <h4 className="">{profile.firstName} {profile.lastName}</h4>
+            <a name={profile._id} id={profile._id} className="update" onClick={handleUpdateEmployee}>{profile.employee}</a>
           </div>
         )}
       </div>

@@ -25,11 +25,11 @@ function Closing() {
   return (
     <>
       <div className="container my-1 overview">
+        <Link to="/" className="links-to-go">← Home</Link>
         <div className="link-tab-overview">
-          <Link to="/" className="link-tab">Home</Link>
-          <Link to="/pendingorders" className="link-tab-selected">Orders</Link>
+          <Link to="/pendingorders" className="link-tab">Orders</Link>
           <Link to="/admin" className="link-tab">Admin</Link>
-          <Link to="/closing" className="link-tab">Closing</Link>
+          <Link to="/closing" className="link-tab-selected">Closing</Link>
         </div>
 
         {kitOrder ? (
@@ -51,15 +51,15 @@ function Closing() {
                     Customer: {order.userName}
                   </h5>
                 </div>
-
-                {order.products.map(({ _id, name }, index) => (
-                  <div key={index} className="products">
-                    <p className="hidden">{_id}</p>
-                    <p>{name}</p>
-
-                  </div>
-                ))}
-                <a name={order._id} id={order.status} className="update-order order-status" onClick={handleUpdateOrder}>{order.status}</a>
+                <div className="products">
+                  {order.products.map(({ _id, name }, index) => (
+                    <div key={index} >
+                      <p className="hidden">{_id}</p>
+                      <p className='products-items'>{name}</p>
+                    </div>
+                  ))}
+                </div>
+                <a name={order._id} id={order.status} className="update-order order-status">{order.status}</a>
               </div>
             ))}
           </div>
