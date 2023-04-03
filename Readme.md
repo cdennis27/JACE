@@ -156,8 +156,8 @@ If you have any questions, suggestions, or would like to get in touch with the J
    - LinkedIn: [Placeholder](https://www.linkedin.com/in/username-c)
 
 4. **Esther**
-   - GitHub: [https://github.com/username-e](https://github.com/username-e)
-   - Email: e@example.com
-   - LinkedIn: [https://www.linkedin.com/in/username-e](https://www.linkedin.com/in/username-e)
+   - GitHub: [yerimechoi](https://github.com/yerimechoi)
+   - Email: yerimechoi@gmail.com
+   - LinkedIn: [Ye Rim (Esther) Choi](https://www.linkedin.com/in/ye-rim-esther-choi/)
 
 We look forward to hearing from you!
