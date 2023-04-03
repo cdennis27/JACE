@@ -118,6 +118,13 @@ Order Page for Kitchen
 
 <br>
 
+<br>
+QR Codes for Routing 
+![image](https://user-images.githubusercontent.com/114437149/229637721-b164c2b6-0735-4008-ac46-dd4855fbcf9a.png)
+
+<br>
+
+
 ## Contributing
 
 We hope JACE will prove to be a valuable tool for fast-dining restaurants in the future! If you have a suggestion for an idea that would suit JACE, or would like to help us out, please reach out to us using the contact information provided in the Contact section.
