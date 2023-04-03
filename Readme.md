@@ -2,6 +2,7 @@
 
 Jace is a MERN application which will be used to provide a modernized fast-dining experience to patrons of a variety of restauaunts. 
 
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -29,7 +30,9 @@ JACE is a full-stack MERN application that many restaurants will be able to use 
 
 ### Accessing the Web Application
 
-JACE is a web-based application in its current state. To start see the mock up restauraunt that JACE is supporting (also called JACE for the sake of demonstration), simply visit the following URL: HEROKU DEPLOYED APP .
+JACE is a web-based application in its current state. To start see the mock up restauraunt that JACE is supporting (also called JACE for the sake of demonstration), simply visit the following URL: 
+
+https://jace1971.herokuapp.com/.
 
 From there, you can create an account, log in, and begin enjoying the fast-dining experience JACE has to offer.
 
@@ -76,6 +79,33 @@ This allows users to modify files locally to fit their own branding. Please note
 JACE is designed to be user-friendly and intuitive. This section provides an overview of the core functionalities available within the application and how to use them effectively.
 
 SCREENSHOTS AND SUCH GO HERE!
+
+<br>
+Login From QR Scan
+<br>
+![image](https://user-images.githubusercontent.com/114437149/229626941-b6bbc0d3-d396-4811-8f16-79801707e33b.png)
+<br>
+
+<br>
+Menu
+<br>
+
+<br>
+Checkout
+<br>
+
+<br>
+
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
 
 ## Contributing
 
