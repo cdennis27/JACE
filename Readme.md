@@ -10,7 +10,7 @@ Jace is a MERN application which will be used to provide a modernized fast-dinin
 4. [Usage](#usage)
 5. [Contributing](#contributing)
 6. [License](#license)
-7. [Contact](#contact)
+7. [Collaborators](#collaborators)
 
 ## Introduction
 
@@ -87,7 +87,7 @@ Please note that we will not be accepting open-source contributions to the code 
 
 SOMETHING GOES HERE
 
-## Contact
+## Collaborators
 
 If you have any questions, suggestions, or would like to get in touch with the JACE team, feel free to reach out to us through the following contact information:
 
